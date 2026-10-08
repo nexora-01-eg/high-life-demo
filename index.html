@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIGH LIFE — تجربة براند فاخرة | ديمو كونسبت</title>
+<meta name="description" content="HIGH LIFE — ديمو كونسبت: كيف يتحول موقع المشروع من معلومات إلى تجربة براند رقمية. Arabic-first, RTL, Dark & Light.">
+<meta property="og:title" content="HIGH LIFE — تجربة براند رقمية">
+<meta property="og:description" content="ديمو كونسبت: الفرق بين موقع تعريفي وتجربة براند رقمية.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23020202'/%3E%3Cpath d='M16 46V18h7v11h18V18h7v28h-7V35H23v11z' fill='%23D8C6A6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+(function(){try{
+  var s=null; try{s=localStorage.getItem('hl-lang')}catch(e){}
+  var lang=(s==='en')?'en':'ar'; document.documentElement.lang=lang; document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
+  var t=null; try{t=localStorage.getItem('hl-theme')}catch(e){}
+  document.documentElement.setAttribute('data-theme',(t==='light')?'light':'dark');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('lock');
+    setTimeout(function(){document.documentElement.classList.remove('lock')},2150);
+  }
+}catch(e){}})();
+</script>
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --ease:cubic-bezier(.16,1,.3,1);
+  --f-brand:'Amiri',serif;
+  --f-body:'Vazirmatn','Segoe UI',sans-serif;
+  --f-display:'Amiri',serif;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* DARK (default) — black, charcoal, warm ivory, subtle champagne */
+  --bg:#020202; --bg2:#070707; --bg3:#0D0D0D;
+  --surface:rgba(255,255,255,.035); --card:#141414; --card2:#0B0B0B;
+  --text:#F3EDE2; --text2:#ABA69D; --muted:#6E6A63;
+  --line:rgba(255,255,255,.075); --line-g:rgba(216,198,166,.22); --line-m:rgba(216,198,166,.1);
+  --champ:#D8C6A6; --champ-d:#B9A177; --on-champ:#0B0A08;
+  --btn-line:rgba(216,198,166,.34);
+  --vis-a:#101010; --vis-b:#020202; --vis-l1:17%; --vis-l2:12%;
+  --sil-b:rgba(247,244,239,.07); --sil-line:rgba(216,198,166,.34); --sil-sh:0 30px 70px rgba(0,0,0,.6);
+  --vign:rgba(2,2,2,.72);
+  --glow:rgba(216,198,166,.1);
+}
+html[data-theme="light"]{
+  /* LIGHT — warm ivory, cream, dark charcoal */
+  --bg:#F2ECDF; --bg2:#EBE4D4; --bg3:#FBF7EF;
+  --surface:rgba(20,18,14,.035); --card:#FBF7EF; --card2:#F6F1E6;
+  --text:#191813; --text2:#4E4A42; --muted:#8B857A;
+  --line:rgba(20,18,14,.1); --line-g:rgba(126,100,54,.34); --line-m:rgba(126,100,54,.16);
+  --champ:#7E6436; --champ-d:#6A5329; --on-champ:#FBF7EF;
+  --btn-line:rgba(126,100,54,.45);
+  --vis-a:#EDE5D6; --vis-b:#FBF7EF; --vis-l1:88%; --vis-l2:83%;
+  --sil-b:rgba(255,255,255,.8); --sil-line:rgba(126,100,54,.4); --sil-sh:0 30px 60px rgba(96,80,50,.16);
+  --vign:rgba(70,58,40,.3);
+  --glow:rgba(126,100,54,.1);
+}
+html[lang="en"]{ --f-body:'Inter',sans-serif; --f-display:'Inter',sans-serif; }
+
+/* ================= BASE ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+html.lock,html.lock body{overflow:hidden}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--bg);color:var(--text);font-family:var(--f-body);line-height:1.9;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.brand{font-family:var(--f-display);line-height:1.35;font-weight:700}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] h4{letter-spacing:-.02em;line-height:1.1}
+a{text-decoration:none;color:inherit}
+input,button{font-family:inherit;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--champ);color:var(--on-champ)}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:24px;position:relative;z-index:2}
+section{padding:110px 0;position:relative}
+.kicker{color:var(--champ-d);letter-spacing:.3em;font-size:11.5px;text-transform:uppercase;display:block;margin-bottom:16px;font-weight:500}
+html[lang="ar"] .kicker{letter-spacing:.12em}
+.grad-text{background:linear-gradient(135deg,var(--text),var(--champ),var(--champ-d));-webkit-background-clip:text;background-clip:text;color:transparent}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--champ-d);border:1px dashed var(--line-g);border-radius:999px;padding:5px 13px}
+.chip i{width:5px;height:5px;border-radius:50%;background:var(--champ);display:block;animation:blip 1.6s infinite}
+@keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* theme crossfade */
+*,*:before,*:after{transition:background-color .5s var(--ease),border-color .5s var(--ease),color .5s var(--ease),box-shadow .5s var(--ease)}
+
+/* ================= REVEAL ================= */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ================= INTRO ================= */
+#intro{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-items:center;animation:introOut .7s var(--ease) 1.5s forwards}
+@keyframes introOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+#intro .intro-in{text-align:center;overflow:hidden;padding:0 20px}
+#intro .word{font-family:var(--f-brand);font-weight:700;font-size:clamp(30px,7vw,74px);letter-spacing:.3em;display:flex;justify-content:center;gap:.02em;direction:ltr}
+#intro .word span{display:inline-block;transform:translateY(115%);opacity:0;animation:introUp .9s var(--ease) forwards}
+#intro .word span:nth-child(1){animation-delay:.1s}#intro .word span:nth-child(2){animation-delay:.16s}
+#intro .word span:nth-child(3){animation-delay:.22s}#intro .word span:nth-child(4){animation-delay:.28s}
+#intro .word span:nth-child(5){animation-delay:.34s}#intro .word span:nth-child(6){animation-delay:.4s}
+#intro .word span:nth-child(7){animation-delay:.46s}#intro .word span:nth-child(8){animation-delay:.52s}
+#intro .word span:nth-child(9){animation-delay:.58s}
+@keyframes introUp{to{transform:translateY(0);opacity:1}}
+#intro .sweep{width:0;height:1px;margin:26px auto 18px;background:linear-gradient(90deg,transparent,var(--champ),transparent);animation:sweep 1s var(--ease) .5s forwards;box-shadow:0 0 14px rgba(216,198,166,.6)}
+@keyframes sweep{to{width:min(420px,70vw)}}
+#intro .tag{font-size:11.5px;letter-spacing:.28em;color:var(--muted);opacity:0;animation:fadeIn .7s ease 1s forwards}
+@keyframes fadeIn{to{opacity:1}}
+#intro .skip{position:absolute;bottom:34px;inset-inline-end:34px;font-size:10.5px;letter-spacing:.24em;color:var(--muted)}
+
+/* ================= NAV ================= */
+#progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:120;transform:scaleX(0);transform-origin:right;background:linear-gradient(270deg,var(--champ),var(--champ-d));pointer-events:none}
+html[dir="ltr"] #progress{transform-origin:left;background:linear-gradient(90deg,var(--champ),var(--champ-d))}
+nav{position:fixed;top:0;left:0;right:0;z-index:110;background:transparent;backdrop-filter:blur(0);border-bottom:1px solid transparent;transition:.5s var(--ease)}
+nav.scrolled{background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;gap:14px}
+.brand{font-weight:700;font-size:21px;letter-spacing:.24em;color:var(--text);white-space:nowrap;direction:ltr}
+.brand b{color:var(--champ)}
+.brand small{display:block;font-family:var(--f-body);font-weight:400;font-size:8.5px;letter-spacing:.26em;color:var(--muted);margin-top:1px}
+html[lang="ar"] .brand small{letter-spacing:.08em}
+.nav-links{display:flex;gap:26px;font-size:13.5px;color:var(--text2)}
+.nav-links a{position:relative;padding:6px 0;transition:color .3s}
+.nav-links a:after{content:"";position:absolute;inset-inline-start:0;bottom:0;height:1px;width:0;background:var(--champ);transition:.45s var(--ease)}
+.nav-links a:hover{color:var(--champ)}
+.nav-links a:hover:after{width:100%}
+.nav-right{display:flex;align-items:center;gap:9px}
+.tbtn{border:1px solid var(--line-g);background:transparent;color:var(--text);border-radius:999px;cursor:pointer;transition:.4s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.tbtn:hover{background:color-mix(in srgb,var(--champ) 12%,transparent);border-color:var(--champ)}
+#langBtn{font-size:12.5px;font-weight:600;padding:8px 14px;min-width:52px}
+#themeBtn{width:34px;height:34px;font-size:15px;padding:0}
+#demoBtn{font-size:11px;letter-spacing:.06em;padding:9px 16px;border-color:var(--line-g);color:var(--champ)}
+#demoBtn .dot{width:7px;height:7px;border-radius:50%;background:var(--muted);transition:.3s}
+#demoBtn .lb-short{display:none}
+body.demo #demoBtn{background:var(--champ);color:var(--on-champ);border-color:transparent;box-shadow:0 0 22px color-mix(in srgb,var(--champ) 40%,transparent)}
+body.demo #demoBtn .dot{background:var(--on-champ)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:22px;height:1.5px;background:var(--text);transition:.35s var(--ease);display:block}
+#mMenu{position:fixed;inset:0;z-index:105;background:color-mix(in srgb,var(--bg) 97%,transparent);backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:center;gap:4px;padding:0 34px;opacity:0;visibility:hidden;transition:.5s var(--ease)}
+#mMenu.open{opacity:1;visibility:visible}
+#mMenu a{font-family:var(--f-display);font-size:24px;font-weight:500;color:var(--text);padding:11px 0;border-bottom:1px solid var(--line)}
+#mMenu a span{color:var(--champ-d);font-family:'Inter';font-size:11px;letter-spacing:.16em;margin-inline-end:12px}
+html[lang="en"] #mMenu a span{letter-spacing:.2em}
+
+/* ================= BUTTONS ================= */
+.btn-gold{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--champ),var(--champ-d));color:var(--on-champ);font-weight:700;font-size:14.5px;padding:14px 30px;border-radius:999px;border:none;cursor:pointer;transition:.4s var(--ease)}
+.btn-gold:hover{filter:brightness(1.08);transform:translateY(-3px);box-shadow:0 16px 40px color-mix(in srgb,var(--champ) 25%,transparent)}
+.btn-line{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--btn-line);color:var(--champ);font-size:14.5px;padding:13px 30px;border-radius:999px;transition:.4s var(--ease);cursor:pointer;background:transparent}
+.btn-line:hover{background:color-mix(in srgb,var(--champ) 10%,transparent);border-color:var(--champ);transform:translateY(-3px)}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;color:var(--champ);font-size:13px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--line-g);transition:.4s var(--ease)}
+.link-arrow:hover{gap:16px;border-color:var(--champ)}
+
+/* ================= VISUAL BLOCKS (placeholder art) ================= */
+.vis{position:relative;overflow:hidden;isolation:isolate;
+  background:
+    radial-gradient(120% 90% at 26% 18%, hsl(var(--h,42) 45% var(--vis-l1)), transparent 62%),
+    radial-gradient(100% 80% at 78% 88%, hsl(calc(var(--h,42) + 34) 50% var(--vis-l2)), transparent 68%),
+    linear-gradient(158deg,var(--vis-a),var(--vis-b))}
+.vis:before{content:"";position:absolute;inset:-20% -40%;background:linear-gradient(115deg,transparent 38%,color-mix(in srgb,var(--text) 9%,transparent) 48%,color-mix(in srgb,var(--champ) 16%,transparent) 51%,transparent 62%);transform:translateX(-45%);animation:sheen 9s var(--ease) infinite;pointer-events:none}
+@keyframes sheen{0%,72%{transform:translateX(-45%)}100%{transform:translateX(45%)}}
+.vis:after{content:"";position:absolute;inset:0;background-image:var(--noise);opacity:.14;mix-blend-mode:overlay;pointer-events:none}
+.vis .vign{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 40%,var(--vign) 100%);pointer-events:none;z-index:3}
+.vis .light{position:absolute;width:58%;height:58%;left:18%;top:8%;border-radius:50%;background:radial-gradient(circle,hsl(var(--h,42) 60% 62% / .3),transparent 68%);filter:blur(30px);pointer-events:none}
+.sil{position:absolute;border:1px solid var(--sil-line);box-shadow:var(--sil-sh),inset 0 1px 0 color-mix(in srgb,var(--text) 14%,transparent);background:linear-gradient(160deg,var(--sil-b),transparent)}
+.sil-c{border-radius:50%;aspect-ratio:1}
+.sil-r{border-radius:14px}
+.sil-pill{border-radius:999px}
+.horizon{position:absolute;left:0;right:0;top:62%;height:1px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--champ) 55%,transparent),transparent);filter:drop-shadow(0 0 10px color-mix(in srgb,var(--champ) 50%,transparent))}
+
+/* ================= HERO ================= */
+#hero{min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 56px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg .light{width:70%;height:70%;left:14%;top:-6%;background:radial-gradient(circle,color-mix(in srgb,var(--champ) 30%,transparent),transparent 66%)}
+.hero-bg .orb{position:absolute;width:min(560px,74vw);aspect-ratio:1;inset-inline-end:-8%;top:6%;border-radius:50%;border:1px solid color-mix(in srgb,var(--champ) 25%,transparent);background:radial-gradient(circle at 32% 28%,color-mix(in srgb,var(--text) 10%,transparent),transparent 62%);animation:orb 22s ease-in-out infinite alternate}
+@keyframes orb{to{transform:translate3d(-4%,4%,0) rotate(8deg)}}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:88px 88px;mask-image:radial-gradient(ellipse at 50% 60%,#000 25%,transparent 78%);pointer-events:none;z-index:1;opacity:.7}
+.hero-in{position:relative;z-index:4;width:100%}
+.hero .eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:26px;opacity:0;transform:translateY(18px)}
+.hero .eyebrow .ln{height:1px;width:64px;background:linear-gradient(90deg,var(--champ),transparent)}
+.hero h1{font-family:var(--f-brand);font-weight:700;font-size:clamp(58px,13vw,186px);line-height:.95;letter-spacing:.04em;direction:ltr;text-transform:uppercase;text-align:start}
+.hero h1 .ch{display:inline-block;transform:translateY(112%);opacity:0}
+html.ready .hero h1 .ch{animation:heroUp 1.1s var(--ease) forwards;animation-delay:calc(1.55s + var(--i) * .055s)}
+@keyframes heroUp{to{transform:translateY(0);opacity:1}}
+.hero h1 .mask{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.hero .tagline{font-family:var(--f-display);font-size:clamp(24px,3.6vw,46px);color:var(--champ);margin-top:24px;line-height:1.6;max-width:16em;opacity:0;transform:translateY(18px)}
+html[lang="en"] .hero .tagline{font-weight:600;letter-spacing:-.01em;line-height:1.25}
+.hero .hero-sub{color:var(--text2);max-width:520px;margin-top:18px;font-size:16px;opacity:0;transform:translateY(18px)}
+.hero .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;opacity:0;transform:translateY(18px)}
+html.ready .hero .eyebrow{animation:fadeUp .9s var(--ease) 2.15s forwards}
+html.ready .hero .tagline{animation:fadeUp .9s var(--ease) 2.3s forwards}
+html.ready .hero .hero-sub{animation:fadeUp .9s var(--ease) 2.45s forwards}
+html.ready .hero .hero-cta{animation:fadeUp .9s var(--ease) 2.6s forwards}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;bottom:34px;inset-inline-end:20px;z-index:5;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:10px;letter-spacing:.26em;color:var(--muted);writing-mode:vertical-rl}
+html[dir="ltr"] .scroll-cue{writing-mode:initial;transform:none}
+.scroll-cue .bar{width:1px;height:56px;background:linear-gradient(180deg,var(--champ),transparent);animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.35);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+.hero-meta{position:absolute;inset-inline-start:24px;bottom:34px;z-index:5;display:flex;gap:24px;font-size:10.5px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+
+/* ================= SECTION HEADS ================= */
+.sec-head{max-width:820px;margin-bottom:60px;position:relative;z-index:4}
+.sec-head h2{font-size:clamp(30px,4.6vw,56px)}
+.sec-head h2 b{color:var(--champ)}
+.sec-head p{color:var(--text2);margin-top:18px;max-width:620px;font-size:16px}
+.sec-head.center{text-align:center;margin-inline:auto}
+.sec-head.center p{margin-inline:auto}
+.sec-idx{position:absolute;top:-52px;inset-inline-start:0;font-family:'Inter';font-size:clamp(76px,11vw,140px);font-weight:600;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--champ) 22%,transparent);line-height:1;pointer-events:none;z-index:0;user-select:none;direction:ltr}
+
+/* ================= DEMO MODE ================= */
+.why{display:none;width:min(620px,100%);margin:0 0 42px auto;background:color-mix(in srgb,var(--card) 94%,transparent);border:1px dashed var(--line-g);border-radius:16px;padding:20px 22px;box-shadow:0 24px 60px rgba(0,0,0,.28);position:relative;z-index:30}
+html[dir="ltr"] .why{margin:0 auto 42px 0}
+.why .why-k{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;color:var(--champ);margin-bottom:10px}
+.why .why-k:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--champ);box-shadow:0 0 10px var(--champ);flex:none}
+.why p{font-size:14.5px;line-height:1.85;color:var(--text2)}
+html[lang="en"] .why p{line-height:1.65}
+body.demo .why{display:block;animation:whyIn .6s var(--ease) both}
+@keyframes whyIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+body.demo section{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--champ) 14%,transparent)}
+body.demo .demo-chip{display:inline-flex}
+.demo-chip{display:none}
+#demoBar{position:fixed;bottom:26px;left:50%;transform:translate(-50%,140%);z-index:95;background:color-mix(in srgb,var(--card) 94%,transparent);border:1px solid var(--line-g);border-radius:999px;padding:11px 22px;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--champ);backdrop-filter:blur(12px);transition:.6s var(--ease);box-shadow:0 18px 50px rgba(0,0,0,.4);white-space:nowrap}
+body.demo #demoBar{transform:translate(-50%,0)}
+#demoBar .x{cursor:pointer;color:var(--muted);padding-inline-start:8px;border-inline-start:1px solid var(--line)}
+#demoBar .x:hover{color:var(--text)}
+
+/* ================= 01 STATEMENT ================= */
+#statement{background:linear-gradient(180deg,var(--bg),var(--bg2) 45%,var(--bg));overflow:hidden}
+.sec-head p.statement-txt{font-family:var(--f-display);font-size:clamp(34px,6vw,84px);line-height:1.55;max-width:16em;font-weight:700;color:var(--text);margin-top:38px}
+html[lang="en"] .sec-head p.statement-txt{line-height:1.08;max-width:14em;letter-spacing:-.02em}
+.statement-txt .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+.statement-txt .w i{display:inline-block;font-style:normal;transform:translateY(105%);transition:transform 1s var(--ease);transition-delay:calc(var(--i) * 45ms)}
+.statement-txt.in .w i{transform:translateY(0)}
+.statement-txt em{font-style:normal;color:var(--champ)}
+.statement-foot{display:flex;gap:38px;flex-wrap:wrap;margin-top:56px;padding-top:34px;border-top:1px solid var(--line-m)}
+.statement-foot div{max-width:280px}
+.statement-foot h4{font-size:13px;letter-spacing:.1em;color:var(--champ-d);margin-bottom:9px;font-weight:700}
+html[lang="en"] .statement-foot h4{letter-spacing:.2em;text-transform:uppercase;font-size:11.5px}
+.statement-foot p{font-size:14.5px;color:var(--muted)}
+.glow-a{position:absolute;top:8%;left:50%;transform:translateX(-50%);width:900px;height:520px;background:radial-gradient(ellipse,var(--glow),transparent 70%);pointer-events:none}
+
+/* ================= 02 BRAND WORLD ================= */
+#world{padding-bottom:0}
+.world-intro{padding-bottom:70px}
+.chapters{position:relative}
+.chapter{position:sticky;top:0;height:100svh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;border-top:1px solid var(--line-m)}
+.chapter .ch-bg{position:absolute;inset:0;z-index:0}
+.chapter .ch-body{position:relative;z-index:4;width:100%;padding:0 24px 76px;max-width:1240px;margin-inline:auto}
+.chapter .ch-idx{font-family:'Inter';font-size:12px;letter-spacing:.3em;color:var(--champ);display:block;margin-bottom:14px;direction:ltr}
+.chapter h3{font-size:clamp(46px,9vw,128px);line-height:1.15}
+html[lang="en"] .chapter h3{line-height:.96;letter-spacing:-.02em}
+.chapter h3 b{display:block;font-weight:inherit}
+html[lang="en"] .chapter h3 span{font-family:'Vazirmatn',sans-serif}
+.chapter h3 span{display:block;font-weight:400;font-size:.34em;letter-spacing:.06em;color:var(--text2);margin-top:14px}
+html[lang="en"] .chapter h3 span{letter-spacing:.2em;text-transform:uppercase;font-size:.3em}
+.chapter p{color:var(--text2);max-width:460px;margin-top:20px;font-size:16px}
+.chapter .ch-rule{width:0;height:1px;background:linear-gradient(90deg,var(--champ),transparent);margin-top:24px;transition:width 1.2s var(--ease) .3s}
+html[dir="ltr"] .chapter .ch-rule{background:linear-gradient(90deg,var(--champ),transparent)}
+.chapter.in .ch-rule{width:min(420px,60%)}
+.chapter .ch-tag{position:absolute;top:104px;inset-inline-end:24px;z-index:4}
+
+/* ================= 03 SIGNATURE ================= */
+.sig-block{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:76px 0;border-top:1px solid var(--line)}
+.sig-block:first-of-type{border-top:none}
+.sig-vis{position:relative;aspect-ratio:4/4.5;border-radius:22px;overflow:hidden;border:1px solid var(--line-g)}
+.sig-vis .sil{width:46%;left:27%;top:26%}
+.sig-vis .sig-badge{position:absolute;inset-inline-start:20px;top:20px;z-index:5}
+.sig-no{font-family:'Inter';font-size:13px;letter-spacing:.28em;color:var(--champ-d);display:block;margin-bottom:16px;direction:ltr}
+.sig-block h3{font-size:clamp(28px,3.6vw,46px);line-height:1.35}
+html[lang="en"] .sig-block h3{line-height:1.12}
+.sig-block h3 b{color:var(--champ);display:block}
+.sig-block .story{color:var(--text2);margin-top:18px;font-size:16px;max-width:470px}
+.sig-detail{display:flex;gap:26px;margin-top:28px;padding-top:22px;border-top:1px dashed var(--line-g);flex-wrap:wrap}
+.sig-detail div span{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.sig-detail div b{font-weight:500;font-size:15px;color:var(--text)}
+.sig-cta{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+/* ================= 04 PRODUCT STORY ================= */
+.sdot{width:8px;height:8px;border-radius:50%;background:var(--line-g);transition:.4s var(--ease);display:block}
+.sdot.on{background:var(--champ);transform:scale(1.35);box-shadow:0 0 10px color-mix(in srgb,var(--champ) 55%,transparent)}
+#story{background:var(--bg2)}
+.story-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.story-media{position:sticky;top:110px}
+.story-frame{position:relative;aspect-ratio:1/1.08;border-radius:24px;overflow:hidden;border:1px solid var(--line-g)}
+.story-frame .story-img{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity .8s var(--ease),transform 1.2s var(--ease)}
+.story-frame .story-img.active{opacity:1;transform:scale(1)}
+.story-frame .story-img .sil{width:44%;left:28%;top:30%}
+.story-step-no{position:absolute;inset-inline-start:18px;bottom:16px;z-index:6;font-family:'Inter';font-size:11px;letter-spacing:.24em;color:var(--champ);background:rgba(0,0,0,.35);border:1px solid var(--line-g);padding:7px 13px;border-radius:999px;backdrop-filter:blur(8px);direction:ltr}
+html[data-theme="light"] .story-step-no{background:rgba(255,255,255,.5)}
+.story-steps{display:flex;flex-direction:column;gap:0}
+.story-step{padding:52px 0 52px 0;border-bottom:1px dashed var(--line-m);opacity:.35;transition:opacity .6s var(--ease)}
+.story-step.on{opacity:1}
+.story-step .st-no{font-family:'Inter';font-size:11.5px;letter-spacing:.26em;color:var(--champ-d);direction:ltr}
+.story-step h3{font-size:clamp(24px,3vw,38px);margin-top:14px}
+html[lang="en"] .story-step h3{line-height:1.15}
+.story-step p{color:var(--text2);margin-top:14px;font-size:15.5px;max-width:520px}
+.story-step .st-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.story-step .st-tags span{font-size:11.5px;border:1px solid var(--line-g);color:var(--text2);padding:6px 14px;border-radius:999px}
+.story-step .btn-gold{margin-top:26px}
+
+/* ================= 05 COLLECTION ================= */
+.coll-bar{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:42px}
+.filters{display:flex;gap:9px;flex-wrap:wrap}
+.filter{font-size:13px;padding:9px 20px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text2);cursor:pointer;transition:.35s var(--ease)}
+.filter:hover{border-color:var(--line-g);color:var(--text)}
+.filter.active{background:var(--champ);border-color:transparent;color:var(--on-champ);font-weight:700}
+.search-box{position:relative}
+.search-box input{width:min(300px,70vw);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:11px 44px 11px 20px;font-size:13.5px;color:var(--text);outline:none;transition:.35s}
+html[dir="rtl"] .search-box input{padding:11px 20px 11px 44px}
+.search-box input:focus{border-color:var(--champ);box-shadow:0 0 0 3px color-mix(in srgb,var(--champ) 14%,transparent)}
+.search-box input::placeholder{color:var(--muted)}
+.search-box svg{position:absolute;inset-inline-end:16px;top:50%;transform:translateY(-50%);opacity:.5;pointer-events:none}
+.coll-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:24px}
+.p-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.5s var(--ease);cursor:pointer}
+.p-card:hover{border-color:var(--line-g);transform:translateY(-8px);box-shadow:0 26px 60px rgba(0,0,0,.35)}
+html[data-theme="light"] .p-card:hover{box-shadow:0 26px 50px rgba(90,75,50,.14)}
+.p-card .p-vis{position:relative;aspect-ratio:1/1;margin:12px;border-radius:13px;overflow:hidden}
+.p-card .p-vis .sil{width:46%;left:27%;top:28%}
+.p-card .p-info{padding:6px 20px 20px}
+.p-card .p-cat{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--champ-d)}
+.p-card h4{font-size:19px;margin-top:8px}
+.p-card .p-meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:12.5px;color:var(--muted)}
+.p-card .p-meta b{color:var(--text2);font-weight:500}
+.p-card .p-cta{color:var(--champ);font-weight:600;font-size:12.5px}
+.coll-empty{grid-column:1/-1;text-align:center;padding:70px 20px;color:var(--muted);border:1px dashed var(--line-g);border-radius:18px;display:none}
+.coll-empty.show{display:block}
+.coll-note{margin-top:34px;font-size:12.5px;color:var(--muted);text-align:center}
+
+/* ================= 06 TRUST ================= */
+#trust{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.t-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:34px 26px;transition:.5s var(--ease);position:relative;overflow:hidden}
+.t-card:hover{border-color:var(--line-g);transform:translateY(-6px)}
+.t-card .t-ico{width:46px;height:46px;border-radius:13px;border:1px solid var(--line-g);display:grid;place-items:center;font-size:20px;color:var(--champ);margin-bottom:20px;background:color-mix(in srgb,var(--champ) 7%,transparent)}
+.t-card h4{font-size:19px;margin-bottom:10px}
+.t-card p{font-size:14px;color:var(--text2)}
+.t-card .t-ph{margin-top:16px;font-size:11px;letter-spacing:.1em;color:var(--muted);border-top:1px dashed var(--line-m);padding-top:12px;text-transform:uppercase}
+.trust-note{margin-top:34px;text-align:center;font-size:13px;color:var(--muted);border:1px dashed var(--line-m);border-radius:14px;padding:16px}
+
+/* ================= 07 WHY THIS DESIGN ================= */
+#why-design{background:var(--bg2)}
+.why-list{display:flex;flex-direction:column;gap:14px}
+.why-item{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden;transition:.45s var(--ease)}
+.why-item.open{border-color:var(--line-g);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+html[data-theme="light"] .why-item.open{box-shadow:0 20px 44px rgba(90,75,50,.12)}
+.why-head{display:flex;align-items:center;gap:20px;padding:24px 26px;cursor:pointer;user-select:none}
+.why-head .w-no{font-family:'Inter';font-size:11.5px;letter-spacing:.2em;color:var(--champ-d);flex:none;direction:ltr}
+.why-head h4{font-size:clamp(18px,2.4vw,25px);flex:1}
+html[lang="en"] .why-head h4{line-height:1.2}
+.why-head .w-plus{width:34px;height:34px;border-radius:50%;border:1px solid var(--line-g);display:grid;place-items:center;flex:none;color:var(--champ);transition:.45s var(--ease);font-size:18px;line-height:1}
+.why-item.open .w-plus{transform:rotate(45deg);background:var(--champ);color:var(--on-champ)}
+.why-body{max-height:0;overflow:hidden;transition:max-height .6s var(--ease)}
+.why-body .wb-in{padding:0 26px 26px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.why-body .wb-in p{font-size:14.5px;color:var(--text2)}
+.why-body .wb-in .wb-k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--champ-d);margin-bottom:8px}
+html[lang="en"] .why-body .wb-in .wb-k{letter-spacing:.2em}
+
+/* ================= 08 BEFORE / AFTER ================= */
+.ba-wrap{position:relative;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--card)}
+.ba-cols{display:grid;grid-template-columns:1fr 1fr;position:relative}
+.ba-col{padding:56px 44px}
+.ba-col.before{background:var(--card2)}
+.ba-col.after{position:relative;overflow:hidden}
+.ba-col.after:before{content:"";position:absolute;inset:0;background:linear-gradient(150deg,color-mix(in srgb,var(--champ) 12%,transparent),transparent 60%)}
+.ba-col .ba-k{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--champ-d);display:block;margin-bottom:14px}
+html[lang="en"] .ba-col .ba-k{letter-spacing:.24em}
+.ba-col h3{font-size:clamp(24px,3vw,34px);margin-bottom:26px}
+.ba-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+.ba-list li{display:flex;gap:13px;align-items:flex-start;font-size:14.5px;color:var(--text2)}
+.ba-list li .m{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;margin-top:4px}
+.ba-list li .m.x{border:1px solid var(--line);color:var(--muted)}
+.ba-list li .m.v{background:color-mix(in srgb,var(--champ) 18%,transparent);border:1px solid var(--line-g);color:var(--champ)}
+.ba-mid{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--champ),transparent);z-index:5;transform:scaleY(0);transform-origin:top;transition:transform 1.4s var(--ease) .4s}
+.ba-wrap.in .ba-mid{transform:scaleY(1)}
+.ba-arrow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;width:58px;height:58px;border-radius:50%;background:var(--champ);color:var(--on-champ);display:grid;place-items:center;font-size:22px;box-shadow:0 0 0 8px color-mix(in srgb,var(--champ) 14%,transparent),0 14px 40px rgba(0,0,0,.35);font-family:'Inter'}
+.ba-verdict{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:38px;flex-wrap:wrap;text-align:center}
+.ba-verdict p{font-family:var(--f-display);font-size:clamp(19px,2.6vw,28px);color:var(--text2)}
+.ba-verdict p b{color:var(--champ)}
+
+/* ================= 09 IDENTITY FLOW ================= */
+.flow{position:relative;max-width:760px;margin-inline:auto;padding-inline-start:0}
+.flow:before{content:"";position:absolute;top:0;bottom:0;inset-inline-start:calc(32px - 1px);width:2px;background:var(--line-m)}
+html[dir="ltr"] .flow:before{left:31px;right:auto}
+.flow .flow-line{position:absolute;top:0;inset-inline-start:calc(32px - 1px);width:2px;background:linear-gradient(180deg,var(--champ),var(--champ-d));height:0;transition:height .1s linear;box-shadow:0 0 12px color-mix(in srgb,var(--champ) 45%,transparent)}
+html[dir="ltr"] .flow .flow-line{left:31px;right:auto}
+.flow-step{position:relative;padding:26px 0 26px 88px}
+html[dir="ltr"] .flow-step{padding:26px 88px 26px 0}
+.flow-step .f-node{position:absolute;inset-inline-start:14px;top:30px;width:38px;height:38px;border-radius:50%;background:var(--bg);border:1px solid var(--line-g);display:grid;place-items:center;font-family:'Inter';font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--champ);direction:ltr;transition:.5s var(--ease);z-index:2}
+html[dir="ltr"] .flow-step .f-node{left:14px;right:auto}
+.flow-step.on .f-node{background:var(--champ);color:var(--on-champ);box-shadow:0 0 0 6px color-mix(in srgb,var(--champ) 14%,transparent)}
+.flow-step h4{font-size:20px;margin-bottom:7px}
+.flow-step p{font-size:14.5px;color:var(--text2);max-width:540px}
+.flow-step .f-en{font-family:'Inter';font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;direction:ltr;text-align:start}
+.flow-quote{margin-top:52px;text-align:center;font-family:var(--f-display);font-size:clamp(22px,3.2vw,36px);line-height:1.65;color:var(--text)}
+html[lang="en"] .flow-quote{line-height:1.25}
+.flow-quote b{color:var(--champ)}
+
+/* ================= 10 YOUR VERSION ================= */
+#yours{background:linear-gradient(180deg,var(--bg),var(--bg3))}
+.yours-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.yours-main h2{font-size:clamp(30px,4.4vw,54px)}
+.yours-main h2 b{color:var(--champ);font-weight:inherit}
+.yours-main .y-lead{color:var(--text2);margin-top:20px;font-size:16.5px;max-width:520px}
+.yours-main .y-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.yours-card{background:var(--card);border:1px solid var(--line-g);border-radius:22px;padding:36px 32px;position:relative;overflow:hidden}
+.yours-card:before{content:"";position:absolute;inset-inline-end:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%)}
+.yours-card .y-tag{position:relative;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--champ-d);display:block;margin-bottom:20px}
+.yours-chips{display:flex;flex-direction:column;gap:11px;position:relative}
+.yours-chips .yc{display:flex;align-items:center;gap:14px;border:1px dashed var(--line-g);border-radius:13px;padding:13px 17px;font-size:14.5px;color:var(--text2);background:color-mix(in srgb,var(--champ) 5%,transparent);transition:.4s var(--ease)}
+.yours-chips .yc:hover{border-style:solid;color:var(--text);transform:translateX(-4px)}
+html[dir="ltr"] .yours-chips .yc:hover{transform:translateX(4px)}
+.yours-chips .yc b{color:var(--champ);font-weight:700;flex:none}
+
+/* ================= FINAL CTA ================= */
+#final{padding:150px 0 130px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 118%,color-mix(in srgb,var(--champ) 16%,transparent),var(--bg) 62%)}
+#final .f-eye{margin-bottom:26px;display:inline-flex}
+#final h2{font-size:clamp(34px,6.4vw,86px);line-height:1.45;max-width:15em;margin-inline:auto}
+html[lang="en"] #final h2{line-height:1.06;text-transform:uppercase;letter-spacing:-.015em}
+#final h2>span:first-child{display:block}
+#final h2>span:last-child{display:block;color:var(--champ);font-size:.62em;margin-top:14px}
+#final .f-sub{color:var(--text2);max-width:540px;margin:26px auto 0;font-size:16.5px}
+#final .f-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+#final .f-brand{margin-top:64px;font-family:var(--f-brand);letter-spacing:.34em;font-size:15px;color:var(--muted);direction:ltr}
+.f-lines{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 130px)}
+
+/* ================= FOOTER ================= */
+footer{border-top:1px solid var(--line);padding:52px 0 130px;font-size:13.5px;color:var(--muted)}
+.foot-in{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.foot-in .brand{font-size:19px}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap}
+.foot-links a:hover{color:var(--champ)}
+.foot-note{margin-top:34px;padding-top:22px;border-top:1px dashed var(--line-m);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px}
+
+/* ================= WIDGETS ================= */
+#wa{position:fixed;inset-inline-start:24px;bottom:24px;z-index:96;width:52px;height:52px;border-radius:50%;background:#1F8F4D;display:grid;place-items:center;box-shadow:0 14px 36px rgba(31,143,77,.42);transition:.4s var(--ease)}
+#wa:hover{transform:translateY(-4px) scale(1.05)}
+#wa svg{width:26px;height:26px;fill:#fff}
+@media(max-width:860px){#demoBar{display:none!important}}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1100px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .trust-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  section{padding:82px 0}
+  .sig-block{grid-template-columns:1fr;gap:34px;padding:56px 0}
+  .sig-vis{aspect-ratio:16/12}
+  .story-wrap{grid-template-columns:1fr;gap:34px}
+  .story-media{position:relative;top:0}
+  .story-frame{aspect-ratio:16/13}
+  .yours-grid{grid-template-columns:1fr;gap:38px}
+  .ba-cols{grid-template-columns:1fr}
+  .ba-mid,.ba-arrow{display:none}
+  .ba-col.after{border-top:1px dashed var(--line-g)}
+  .why-body .wb-in{grid-template-columns:1fr;gap:18px}
+  .chapter{min-height:520px;height:88svh}
+  .chapter .ch-body{padding-bottom:56px}
+  .hero-meta{display:none}
+}
+@media(max-width:640px){
+  .wrap{padding-inline:20px}
+  #intro .word{letter-spacing:.18em}
+  #demoBtn .lb-long{display:none}
+  #demoBtn .lb-short{display:inline}
+  #demoBtn{padding:9px 13px}
+  .brand{font-size:17px;letter-spacing:.18em}
+  .nav-in{height:64px;gap:8px}
+  #langBtn{padding:7px 11px;font-size:11.5px;min-width:46px}
+  #themeBtn{width:31px;height:31px}
+  .hero h1{font-size:clamp(52px,17vw,96px)}
+  .hero .tagline{font-size:clamp(21px,6vw,30px);max-width:12em}
+  .sec-head p.statement-txt{font-size:clamp(30px,8vw,44px);margin-top:26px}
+  .statement-foot{gap:24px}
+  .coll-bar{flex-direction:column;align-items:stretch}
+  .search-box input{width:100%}
+  .filters{overflow-x:auto;padding-bottom:4px;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .filter{white-space:nowrap}
+  .coll-grid{grid-template-columns:1fr 1fr;gap:13px}
+  .p-card .p-info{padding:4px 14px 16px}
+  .p-card h4{font-size:16px}
+  .p-card .p-meta{flex-direction:column;align-items:flex-start;gap:6px}
+  .trust-grid{grid-template-columns:1fr}
+  .why-head{padding:19px 18px;gap:13px}
+  .why-body .wb-in{padding:0 18px 20px}
+  .ba-col{padding:40px 26px}
+  .flow-step{padding-inline-start:74px}
+  .flow-step h4{font-size:17.5px}
+  .yours-card{padding:28px 22px}
+  #final{padding:104px 0 90px}
+  .scroll-cue{display:none}
+  .sec-idx{font-size:64px;top:-34px}
+  #wa{inset-inline-start:18px;bottom:18px;width:48px;height:48px}
+  .foot-in{flex-direction:column;gap:20px}
+}
+
+/* ================= REDUCED MOTION / NO-JS ================= */
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.15s!important}
+  .rv{opacity:1!important;transform:none!important}
+  .hero h1 .ch,.hero .eyebrow,.hero .tagline,.hero .hero-sub,.hero .hero-cta{opacity:1!important;transform:none!important;animation:none!important}
+  .statement-txt .w i{transform:none!important}
+  .vis:before,.hero-bg .orb{animation:none!important}
+}
+.rv.forced{opacity:1!important;transform:none!important}
+</style>
+<body>
+
+<!-- ============ CINEMATIC INTRO ============ -->
+<div id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <div class="word"><span>H</span><span>I</span><span>G</span><span>H</span><span>&nbsp;</span><span>L</span><span>I</span><span>F</span><span>E</span></div>
+    <div class="sweep"></div>
+    <p class="tag" data-ar="تجربة براند رقمية" data-en="A DIGITAL BRAND EXPERIENCE">تجربة براند رقمية</p>
+  </div>
+  <div class="skip">HIGH LIFE</div>
+</div>
+
+<div id="progress"></div>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#hero" class="brand">HIGH <b>LIFE</b><small data-ar="تجربة كونسبت" data-en="A CONCEPT DEMO">تجربة كونسبت</small></a>
+    <div class="nav-links">
+      <a href="#statement" data-ar="البيان" data-en="Statement">البيان</a>
+      <a href="#world" data-ar="عالم البراند" data-en="Brand World">عالم البراند</a>
+      <a href="#signature" data-ar="القطع" data-en="Signature">القطع</a>
+      <a href="#collection" data-ar="المجموعة" data-en="Collection">المجموعة</a>
+      <a href="#trust" data-ar="الثقة" data-en="Trust">الثقة</a>
+      <a href="#final" data-ar="تواصل" data-en="Contact">تواصل</a>
+    </div>
+    <div class="nav-right">
+      <button id="langBtn" class="tbtn" aria-label="Language">EN</button>
+      <button id="themeBtn" class="tbtn" aria-label="Theme"><span id="themeIco">☀</span></button>
+      <button id="demoBtn" class="tbtn"><i class="dot"></i><span class="lb-long" data-ar="اشرح لي التجربة" data-en="Explain the experience">اشرح لي التجربة</span><span class="lb-short" data-ar="اشرح" data-en="Explain">اشرح</span></button>
+      <button id="burger" class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div id="mMenu">
+  <a href="#statement"><span>01</span><span data-ar="البيان" data-en="Statement" style="all:unset">البيان</span></a>
+  <a href="#world"><span>02</span><span data-ar="عالم البراند" data-en="Brand World" style="all:unset">عالم البراند</span></a>
+  <a href="#signature"><span>03</span><span data-ar="القطع المميزة" data-en="Signature" style="all:unset">القطع المميزة</span></a>
+  <a href="#collection"><span>05</span><span data-ar="المجموعة" data-en="Collection" style="all:unset">المجموعة</span></a>
+  <a href="#why-design"><span>07</span><span data-ar="لماذا هذا التصميم" data-en="Why this design" style="all:unset">لماذا هذا التصميم</span></a>
+  <a href="#final"><span>10</span><span data-ar="ابني تجربتك" data-en="Build yours" style="all:unset">ابني تجربتك</span></a>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="light"></div>
+    <div class="orb"></div>
+    <div class="vign" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,transparent 46%,var(--vign) 100%);z-index:3;pointer-events:none"></div>
+  </div>
+  <div class="wrap hero-in">
+    <div class="eyebrow"><span class="ln"></span><span class="chip"><i></i><span data-ar="ديمو كونسبت — بدون ادّعاءات" data-en="CONCEPT DEMO — NO CLAIMS">ديمو كونسبت — بدون ادّعاءات</span></span></div>
+    <h1 aria-label="HIGH LIFE">
+      <span class="mask"><span class="ch" style="--i:0">H</span><span class="ch" style="--i:1">I</span><span class="ch" style="--i:2">G</span><span class="ch" style="--i:3">H</span></span>
+      <span class="mask"><span class="ch" style="--i:4">&nbsp;</span><span class="ch" style="--i:5">L</span><span class="ch" style="--i:6">I</span><span class="ch" style="--i:7">F</span><span class="ch" style="--i:8">E</span></span>
+    </h1>
+    <p class="tagline" data-ar="مش مجرد اختيار… دي طريقة تعيش بيها." data-en="Not just a choice. It is how you choose to live.">مش مجرد اختيار… دي طريقة تعيش بيها.</p>
+    <p class="hero-sub" data-ar="كل تفصيلة في التجربة دي — من أول حرف لآخر انتقال — ليها سبب في البناء، وليها سبب في شعورك تجاه البراند." data-en="Every detail here — from the first letter to the last transition — has a reason in the construction, and a reason for how you feel about the brand.">كل تفصيلة في التجربة دي — من أول حرف لآخر انتقال — ليها سبب في البناء، وليها سبب في شعورك تجاه البراند.</p>
+    <div class="hero-cta">
+      <a href="#statement" class="btn-gold"><span data-ar="ادخل التجربة" data-en="Enter the experience">ادخل التجربة</span> <span style="font-family:Inter">↓</span></a>
+      <a href="#collection" class="btn-line"><span data-ar="تصفّح المنتجات" data-en="Explore products">تصفّح المنتجات</span></a>
+    </div>
+  </div>
+  <div class="hero-meta"><span>01 / Brand Experience</span><span data-ar="عربي / EN · دارك / لايت" data-en="AR / EN · Dark / Light">عربي / EN · دارك / لايت</span></div>
+  <div class="scroll-cue"><span data-ar="اسحب للأسفل" data-en="SCROLL">اسحب للأسفل</span><span class="bar"></span></div>
+</section>
+
+<!-- ============ 01 BRAND STATEMENT ============ -->
+<section id="statement">
+  <div class="glow-a"></div>
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا بدأنا بالهوية بدل المنتجات؟" data-en="Why start with identity instead of products?">لماذا بدأنا بالهوية بدل المنتجات؟</span></div>
+      <p data-ar="لأن بعض الأنشطة لا تبيع المنتج فقط، بل تبيع الثقة والانطباع والأسلوب. القسم ده بيبني الموقع العاطفي للبراند قبل أي سعر أو طلب شراء — عشان الزائر يحس الأول، ويشتري بعدين." data-en="Because some businesses do not sell the product alone — they sell trust, impression and style. This section builds the brand's emotional position before any price or purchase ask: the visitor feels first, buys after.">لأن بعض الأنشطة لا تبيع المنتج فقط، بل تبيع الثقة والانطباع والأسلوب.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">01</span>
+      <span class="kicker" data-ar="بيان البراند" data-en="Brand Statement">بيان البراند</span>
+      <p class="statement-txt" data-split data-ar="التفاصيل الصغيرة… هي التي تصنع الفرق." data-en="The smallest details are the ones that make the difference.">التفاصيل الصغيرة… هي التي تصنع الفرق.</p>
+    </div>
+    <div class="statement-foot rv">
+      <div>
+        <h4 data-ar="المبدأ" data-en="The Principle">المبدأ</h4>
+        <p data-ar="البراند بيبدأ من فكرة، مش من قائمة منتجات. الفكرة دي هي اللي بتخلي أي تفصيلة تيجي في مكانها." data-en="A brand starts from an idea, not a product list. That idea is what puts every detail in its place.">البراند بيبدأ من فكرة، مش من قائمة منتجات.</p>
+      </div>
+      <div>
+        <h4 data-ar="الأسلوب" data-en="The Style">الأسلوب</h4>
+        <p data-ar="هادئ، دافي، وواثق. لا يرفع صوته — لأن اللي متأكد من نفسه ما بيحتاجش يشرح نفسه." data-en="Quiet, warm, confident. It never raises its voice — sure things don't need to explain themselves.">هادئ، دافي، وواثق. لا يرفع صوته.</p>
+      </div>
+      <div>
+        <h4 data-ar="النتيجة" data-en="The Result">النتيجة</h4>
+        <p data-ar="الزائر بيخرج وهو فاهم إحساس البراند — مش مجرد شايف ألوان ومنتجين." data-en="The visitor leaves understanding how the brand feels — not just having seen colors and products.">الزائر بيخرج وهو فاهم إحساس البراند.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 BRAND WORLD ============ -->
+<section id="world">
+  <div class="wrap world-intro">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا فصول بدل قائمة مميزات؟" data-en="Why chapters instead of a feature list?">لماذا فصول بدل قائمة مميزات؟</span></div>
+      <p data-ar="لأن المميزات بتتقرأ وتتنسى، لكن الأجواء بتتفضل في الذاكرة. كل فصل بيغيّر الخلفية والإضاءة والحركة — عشان تحس إنك بتعدي من مكان لمكان، مش إنك بتنزل في صفحة." data-en="Features get read and forgotten; atmospheres stay in memory. Each chapter changes background, light and motion so you feel you are moving through places — not scrolling one page.">لأن المميزات بتتقرأ وتتنسى، لكن الأجواء بتتفضل في الذاكرة.</p>
+      <p data-ar="ملاحظة حركة: التثبيت (Pinning) هنا مش زينة — هو اللي بيخلّي الصورة تفضل ثابتة بينما النص هو اللي بيتغيّر، فعينك تعرف إن إحنا بنغيّر الفصل، مش بنعيد تحميل الصفحة." data-en="Motion note: pinning here is not decoration — the image stays fixed while only the text changes, so your eye reads 'new chapter', not 'page reloaded'.">ملاحظة حركة: التثبيت هنا مش زينة.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">02</span>
+      <span class="kicker" data-ar="عالم البراند" data-en="Brand World">عالم البراند</span>
+      <h2 data-ar="أربعة فصول… تبني الإحساس قبل ما تبني الرغبة." data-en="Four chapters that build feeling before desire.">أربعة فصول… تبني الإحساس قبل ما تبني الرغبة.</h2>
+      <p data-ar="اسحب ببطء. كل فصل بيغيّر الخلفية والإضاءة — ويبقى مثبّت لحد ما تخلّص منه." data-en="Scroll slowly. Each chapter shifts background and light — and stays pinned until you finish it.">اسحب ببطء. كل فصل بيغيّر الخلفية والإضاءة.</p>
+    </div>
+  </div>
+  <div class="chapters">
+    <div class="chapter" data-ch>
+      <div class="ch-bg vis" style="--h:42"><div class="light"></div><div class="sil sil-c" style="width:min(300px,38vw);inset-inline-end:8%;top:18%"></div><div class="sil sil-r" style="width:min(340px,44vw);height:min(190px,24vw);inset-inline-end:16%;bottom:22%"></div><div class="horizon"></div><div class="vign"></div></div>
+      <span class="chip ch-tag"><i></i><span data-ar="الفصل الأول" data-en="Chapter One">الفصل الأول</span></span>
+      <div class="ch-body">
+        <span class="ch-idx">CHAPTER 01 — QUALITY</span>
+        <h3><b data-ar="الجودة" data-en="Quality">الجودة</b><span class="ch-alt" data-ar="Quality" data-en="الجودة">Quality</span></h3>
+        <p data-ar="الجودة مش خطوة في الشغل… دي نقطة البداية. مش بنتكلم عن «ممتاز» — بنتكلم عن قرار يتاخد مرة واحدة ويفضل صح سنين." data-en="Quality is not a step in the process — it is the starting point. Not the word 'great', but a decision made once and right for years.">الجودة مش خطوة في الشغل… دي نقطة البداية.</p>
+        <div class="ch-rule"></div>
+      </div>
+    </div>
+    <div class="chapter" data-ch>
+      <div class="ch-bg vis" style="--h:16"><div class="light"></div><div class="sil sil-pill" style="width:min(300px,52vw);height:74px;inset-inline-end:10%;top:30%"></div><div class="sil sil-c" style="width:min(170px,26vw);inset-inline-start:12%;bottom:26%"></div><div class="horizon" style="top:70%"></div><div class="vign"></div></div>
+      <span class="chip ch-tag"><i></i><span data-ar="الفصل الثاني" data-en="Chapter Two">الفصل الثاني</span></span>
+      <div class="ch-body">
+        <span class="ch-idx">CHAPTER 02 — DETAILS</span>
+        <h3><b data-ar="التفاصيل" data-en="Details">التفاصيل</b><span class="ch-alt" data-ar="Details" data-en="التفاصيل">Details</span></h3>
+        <p data-ar="الفرق كله في اللي ما يتشافش بالعين بسرعة. الحافة، الوزن، الإضاءة على الزاوية — الحاجات اللي الزبون ما بيعرفش يسميها، لكن بيحسّها." data-en="The whole difference lives in what the eye misses at first: the edge, the weight, the light on an angle — things the customer cannot name, but feels.">الفرق كله في اللي ما يتشافش بالعين بسرعة.</p>
+        <div class="ch-rule"></div>
+      </div>
+    </div>
+    <div class="chapter" data-ch>
+      <div class="ch-bg vis" style="--h:200"><div class="light" style="background:radial-gradient(circle,rgba(140,170,210,.22),transparent 68%)"></div><div class="sil sil-r" style="width:min(260px,36vw);height:min(340px,50vw);inset-inline-end:14%;top:14%"></div><div class="sil sil-r" style="width:min(220px,30vw);height:min(260px,40vw);inset-inline-start:14%;bottom:16%;opacity:.6"></div><div class="horizon"></div><div class="vign"></div></div>
+      <span class="chip ch-tag"><i></i><span data-ar="الفصل الثالث" data-en="Chapter Three">الفصل الثالث</span></span>
+      <div class="ch-body">
+        <span class="ch-idx">CHAPTER 03 — STYLE</span>
+        <h3><b data-ar="الأسلوب" data-en="Style">الأسلوب</b><span class="ch-alt" data-ar="Style" data-en="الأسلوب">Style</span></h3>
+        <p data-ar="أسلوب هادي ما بيحتاجش يصارخ. لون واحد قوي، مساحة فاضية كفاية، وجملة واحدة تتفضل في دماغك بعد ما تقفل الصفحة." data-en="A quiet style never needs to raise its voice: one strong color, enough empty space, and one sentence that stays in your head after you close the page.">أسلوب هادي ما بيحتاجش يصارخ.</p>
+        <div class="ch-rule"></div>
+      </div>
+    </div>
+    <div class="chapter" data-ch>
+      <div class="ch-bg vis" style="--h:270"><div class="light" style="background:radial-gradient(circle,rgba(190,150,220,.2),transparent 68%)"></div><div class="sil sil-c" style="width:min(360px,58vw);left:50%;top:50%;transform:translate(-50%,-50%)"></div><div class="sil sil-pill" style="width:min(240px,40vw);height:64px;inset-inline-start:10%;bottom:20%"></div><div class="horizon" style="top:52%"></div><div class="vign"></div></div>
+      <span class="chip ch-tag"><i></i><span data-ar="الفصل الرابع" data-en="Chapter Four">الفصل الرابع</span></span>
+      <div class="ch-body">
+        <span class="ch-idx">CHAPTER 04 — EXPERIENCE</span>
+        <h3><b data-ar="التجربة" data-en="Experience">التجربة</b><span class="ch-alt" data-ar="Experience" data-en="التجربة">Experience</span></h3>
+        <p data-ar="من أول لحظة — الصورة والحرف — لآخر تفصيلة — الزرار والرسالة. التجربة دي هي المنتج الرقمي بتاعك، وده اللي الزائر بيقيّمك فيه." data-en="From the first moment — image and letter — to the last detail — button and message. This experience is your digital product, and it is what judges you.">من أول لحظة لآخر تفصيلة.</p>
+        <div class="ch-rule"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 SIGNATURE PIECES ============ -->
+<section id="signature">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا قطعة واحدة في كل شاشة؟" data-en="Why one piece per screen?">لماذا قطعة واحدة في كل شاشة؟</span></div>
+      <p data-ar="لأن الصفوف المتكدسة بتحوّل البراند لمتجر رخيص. القطعة الواحدة بتدي كل حاجة مساحة تتنفس — والزائر بيحس إن بيترعرض عليه اختيار، مش كتالوج." data-en="Stacked rows turn a brand into a cheap store. One piece at a time gives everything room to breathe — the visitor feels offered a choice, not a catalog.">لأن الصفوف المتكدسة بتحوّل البراند لمتجر رخيص.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">03</span>
+      <span class="kicker" data-ar="القطع المميزة" data-en="Signature Pieces">القطع المميزة</span>
+      <h2 data-ar="ثلاث قطع… كل واحدة بتحكي قصة لوحدها." data-en="Three pieces. Each tells its own story.">ثلاث قطع… كل واحدة بتحكي قصة لوحدها.</h2>
+      <p data-ar="عرض تحريري (Editorial) — مش شبكة منتجات. الصورة تاخد المساحة، والمعلومات تيجي جنبها بترتيب." data-en="An editorial presentation — not a product grid. Image takes the space, information follows in order.">عرض تحريري (Editorial) — مش شبكة منتجات.</p>
+    </div>
+
+    <div class="sig-block rv">
+      <div class="sig-vis vis" style="--h:44">
+        <span class="chip sig-badge"><i></i><span data-ar="معلومة غير موثقة — Placeholder" data-en="UNVERIFIED — PLACEHOLDER">معلومة غير موثقة — Placeholder</span></span>
+        <div class="sil sil-c" style="width:52%;left:24%;top:24%"></div>
+        <div class="sil sil-pill" style="width:34%;height:56px;inset-inline-end:14%;bottom:16%"></div>
+        <div class="horizon"></div><div class="vign"></div>
+      </div>
+      <div>
+        <span class="sig-no">SIGNATURE 01 — CHRONOGRAPH</span>
+        <h3>القطعة التوقيعية<b data-ar="كرونوغراف" data-en="Chronograph">كرونوغراف</b></h3>
+        <p class="story" data-ar="هي القطعة اللي بتعرفك بيها أول مرة. شكل واضح، وزن محسوس، وحضور بيملا الإطار من غير ما يصرخ — بتحكي إن البراند بيفهم الوقت قبل ما يبيعه." data-en="The piece that introduces you first: clear form, felt weight, presence that fills the frame without shouting — it says the brand understands time before it sells it.">هي القطعة اللي بتعرفك بيها أول مرة.</p>
+        <div class="sig-detail">
+          <div><span data-ar="الفئة" data-en="Category">الفئة</span><b data-ar="ساعات" data-en="Watches">ساعات</b></div>
+          <div><span data-ar="الحالة" data-en="Status">الحالة</span><b data-ar="Placeholder" data-en="Placeholder">Placeholder</b></div>
+          <div><span data-ar="السعر" data-en="Price">السعر</span><b data-ar="غير مُعلن" data-en="Not announced">غير مُعلن</b></div>
+        </div>
+        <div class="sig-cta">
+          <a href="#story" class="btn-gold"><span data-ar="اقرأ قصتها" data-en="Read its story">اقرأ قصتها</span> →</a>
+          <a href="#collection" class="link-arrow"><span data-ar="كل القطع" data-en="All pieces">كل القطع</span> →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sig-block rv">
+      <div>
+        <span class="sig-no">SIGNATURE 02 — WEEKENDER</span>
+        <h3>ويكندر التراث<b data-ar="حقيبة السفر" data-en="The Heritage Bag">حقيبة السفر</b></h3>
+        <p class="story" data-ar="رحلة قصيرة، جلد بيكبر مع الوقت، وتفاصيل بتتحسّب. القطعة دي بتقول: أنا مش للعرض — أنا للاستخدام الطويل." data-en="A short trip, leather that ages well, details you can count. This piece says: I am not for display — I am for long use.">رحلة قصيرة، جلد بيكبر مع الوقت.</p>
+        <div class="sig-detail">
+          <div><span data-ar="الفئة" data-en="Category">الفئة</span><b data-ar="جلود" data-en="Leather">جلود</b></div>
+          <div><span data-ar="الحالة" data-en="Status">الحالة</span><b data-ar="Placeholder" data-en="Placeholder">Placeholder</b></div>
+          <div><span data-ar="السعر" data-en="Price">السعر</span><b data-ar="غير مُعلن" data-en="Not announced">غير مُعلن</b></div>
+        </div>
+        <div class="sig-cta">
+          <a href="#story" class="btn-gold"><span data-ar="اقرأ قصتها" data-en="Read its story">اقرأ قصتها</span> →</a>
+          <a href="#collection" class="link-arrow"><span data-ar="كل القطع" data-en="All pieces">كل القطع</span> →</a>
+        </div>
+      </div>
+      <div class="sig-vis vis" style="--h:28">
+        <span class="chip sig-badge"><i></i><span data-ar="معلومة غير موثقة — Placeholder" data-en="UNVERIFIED — PLACEHOLDER">معلومة غير موثقة — Placeholder</span></span>
+        <div class="sil sil-r" style="width:56%;height:52%;left:22%;top:26%"></div>
+        <div class="sil sil-c" style="width:26%;inset-inline-end:12%;top:14%;opacity:.7"></div>
+        <div class="horizon" style="top:74%"></div><div class="vign"></div>
+      </div>
+    </div>
+
+    <div class="sig-block rv">
+      <div class="sig-vis vis" style="--h:190">
+        <span class="chip sig-badge"><i></i><span data-ar="معلومة غير موثقة — Placeholder" data-en="UNVERIFIED — PLACEHOLDER">معلومة غير موثقة — Placeholder</span></span>
+        <div class="sil sil-r" style="width:44%;height:56%;left:28%;top:22%;border-radius:8px"></div>
+        <div class="sil sil-pill" style="width:30%;height:52px;inset-inline-start:14%;bottom:14%;opacity:.7"></div>
+        <div class="horizon"></div><div class="vign"></div>
+      </div>
+      <div>
+        <span class="sig-no">SIGNATURE 03 — ATELIER OBJECT</span>
+        <h3>أوبجيكت الأتيليه<b data-ar="قطعة المكان" data-en="Atelier Object">قطعة المكان</b></h3>
+        <p class="story" data-ar="مش لازم يتنبّع. حاضر في الصورة، ثقيل في الإحساس، وبيعرف الزائر إن المكان ده له ذوق — حتى لو رجع بعدين من غير ما يشتري." data-en="It needs not to be sold. Present in the frame, heavy in feel, it tells the visitor this place has taste — even if they return without buying.">مش لازم يتنبّع. حاضر في الصورة، ثقيل في الإحساس.</p>
+        <div class="sig-detail">
+          <div><span data-ar="الفئة" data-en="Category">الفئة</span><b data-ar="أوبجيكتس" data-en="Objects">أوبجيكتس</b></div>
+          <div><span data-ar="الحالة" data-en="Status">الحالة</span><b data-ar="Placeholder" data-en="Placeholder">Placeholder</b></div>
+          <div><span data-ar="السعر" data-en="Price">السعر</span><b data-ar="غير مُعلن" data-en="Not announced">غير مُعلن</b></div>
+        </div>
+        <div class="sig-cta">
+          <a href="#story" class="btn-gold"><span data-ar="اقرأ قصتها" data-en="Read its story">اقرأ قصتها</span> →</a>
+          <a href="#collection" class="link-arrow"><span data-ar="كل القطع" data-en="All pieces">كل القطع</span> →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ 04 PRODUCT STORY ============ -->
+<section id="story">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا قصة قبل السعر؟" data-en="Why a story before the price?">لماذا قصة قبل السعر؟</span></div>
+      <p data-ar="لأن السعر من غير سبب = مقارنة. والبراند اللي بيتحطّ في مقارنة سعر بيخسر. القسم ده بيدّي الزائر سبب يفتكره — وبعدها السعر يبقى تفصيلة، مش حكم." data-en="A price without a reason is a comparison — and a brand placed in a price comparison loses. This section gives the visitor a reason to remember; after that the price is a detail, not a verdict.">لأن السعر من غير سبب = مقارنة.</p>
+      <p data-ar="ملاحظة حركة: الصورة مثبتة والنص هو اللي بيتحرك — عشان عينك تفضل على القطعة واحدة وأنت بتقرأ، بدل ما تدوّر على الصورة كل شاشة." data-en="Motion note: the image is pinned while text moves — your eye stays on one piece while reading, instead of hunting for a new image every screen.">ملاحظة حركة: الصورة مثبتة والنص هو اللي بيتحرك.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">04</span>
+      <span class="kicker" data-ar="قصة المنتج" data-en="Product Story">قصة المنتج</span>
+      <h2 data-ar="كيف تُحكي قطعة واحدة… حتى لا تُنسى." data-en="How to tell one piece's story so it is never forgotten.">كيف تُحكي قطعة واحدة… حتى لا تُنسى.</h2>
+      <p data-ar="اسحب: كل خطوة بتغيّر الصورة — الفكرة، التفاصيل، ثم الدعوة." data-en="Scroll: each step changes the image — the idea, the details, then the invitation.">اسحب: كل خطوة بتغيّر الصورة.</p>
+    </div>
+    <div class="story-wrap">
+      <div class="story-media">
+        <div class="story-frame vis" style="--h:44">
+          <div class="story-img active" data-img="0"><div class="sil sil-c" style="width:50%;left:25%;top:25%"></div><div class="sil sil-pill" style="width:34%;height:54px;inset-inline-end:14%;bottom:14%"></div></div>
+          <div class="story-img" data-img="1"><div class="sil sil-c" style="width:64%;left:18%;top:18%;border-width:2px"></div><div class="sil sil-r" style="width:30%;height:24%;inset-inline-start:10%;bottom:12%;opacity:.75"></div></div>
+          <div class="story-img" data-img="2"><div class="sil sil-r" style="width:70%;height:44%;left:15%;top:20%"></div><div class="sil sil-pill" style="width:44%;height:60px;inset-inline-end:12%;bottom:14%"></div></div>
+          <div class="sil sil-pill" style="width:40%;height:70px;inset-inline-start:12%;top:12%;opacity:.5"></div>
+          <div class="horizon"></div><div class="vign"></div>
+          <span class="story-step-no"><span id="storyNo">01</span> / 03</span>
+        </div>
+        <div style="display:flex;gap:9px;justify-content:center;margin-top:18px">
+          <i class="sdot on" data-dot="0"></i><i class="sdot" data-dot="1"></i><i class="sdot" data-dot="2"></i>
+        </div>
+      </div>
+      <div class="story-steps">
+        <div class="story-step on" data-step="0">
+          <span class="st-no">STEP 01 — THE IDEA</span>
+          <h3 data-ar="الفكرة" data-en="The Idea">الفكرة</h3>
+          <p data-ar="القطعة بدأت من سؤال واحد: إيه اللي بيخلّي حاجة تفضل تُلبس بعد عشر سنين؟ الإجابة مش في الفلز — في القرار إن كل تفصيلة تتحلّ بدل ما تتخطّى." data-en="The piece began from one question: what makes something still worn after ten years? The answer is not in the metal — it is in deciding to solve every detail instead of skipping it.">القطعة بدأت من سؤال واحد.</p>
+          <div class="st-tags"><span data-ar="كونسبت" data-en="Concept">كونسبت</span><span data-ar="Placeholder" data-en="Placeholder">Placeholder</span></div>
+        </div>
+        <div class="story-step" data-step="1">
+          <span class="st-no">STEP 02 — THE DETAILS</span>
+          <h3 data-ar="التفاصيل" data-en="The Details">التفاصيل</h3>
+          <p data-ar="الوزن، الحافة، الطريقة اللي بيقفل بيها. حاجات الزائر ما بيكتبهاش في الريفيو — لكن بيحسّها في أول ثانية ما شالها." data-en="Weight, edge, the way it closes. Things the visitor never writes in a review — but feels in the first second of holding it.">الوزن، الحافة، الطريقة اللي بيقفل بيها.</p>
+          <div class="st-tags"><span data-ar="خامات" data-en="Materials">خامات</span><span data-ar="تشطيب" data-en="Finish">تشطيب</span><span data-ar="Placeholder" data-en="Placeholder">Placeholder</span></div>
+        </div>
+        <div class="story-step" data-step="2">
+          <span class="st-no">STEP 03 — THE INVITATION</span>
+          <h3 data-ar="الدعوة" data-en="The Invitation">الدعوة</h3>
+          <p data-ar="من غير ضغط ولا عدّاد نقصان. جملة واحدة وزرار واحد — الزائر يقرر هو، والبراند يفضل واثق." data-en="No pressure, no countdown. One sentence and one button — the visitor decides, and the brand stays confident.">من غير ضغط ولا عدّاد نقصان.</p>
+          <div class="st-tags"><span data-ar="دعوة هادئة" data-en="Quiet CTA">دعوة هادئة</span></div>
+          <a href="#final" class="btn-gold"><span data-ar="احجز استشارة هوية" data-en="Book an identity call">احجز استشارة هوية</span> →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 COLLECTION ============ -->
+<section id="collection">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا شبكة هادية + بحث؟" data-en="Why a calm grid + search?">لماذا شبكة هادية + بحث؟</span></div>
+      <p data-ar="لأن ده أول مكان بيتحول فيه الإحساس لقرار. الفلاتر بتمنع الضياع، والبحث بيوفّر وقت الزائر اللي جاي بفكرة في دماغه — والمساحة الفاضية بتقول: خد وقتك." data-en="Because this is where feeling turns into decision. Filters prevent getting lost, search saves time for the visitor who arrives with an idea — and the empty space says: take your time.">لأن ده أول مكان بيتحول فيه الإحساس لقرار.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">05</span>
+      <span class="kicker" data-ar="المجموعة" data-en="Collection">المجموعة</span>
+      <h2 data-ar="المجموعة… من غير ضجيج." data-en="The collection. Without the noise.">المجموعة… من غير ضجيج.</h2>
+      <p data-ar="فلترة + بحث فوري. جرّب اكتب في البحث." data-en="Filter + instant search. Try typing in search.">فلترة + بحث فوري.</p>
+    </div>
+    <div class="coll-bar rv">
+      <div class="filters" id="filters">
+        <button class="filter active" data-f="all" data-ar="الكل" data-en="All">الكل</button>
+        <button class="filter" data-f="watch" data-ar="ساعات" data-en="Watches">ساعات</button>
+        <button class="filter" data-f="leather" data-ar="جلود" data-en="Leather">جلود</button>
+        <button class="filter" data-f="object" data-ar="أوبجيكتس" data-en="Objects">أوبجيكتس</button>
+      </div>
+      <div class="search-box">
+        <input id="search" type="search" data-ar-ph="ابحث عن قطعة…" data-en-ph="Search a piece…" placeholder="ابحث عن قطعة…" aria-label="Search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </div>
+    </div>
+    <div class="coll-grid" id="collGrid">
+      <article class="p-card rv" data-cat="watch" data-name-ar="كرونوغراف التوقيع كرونوجراف ساعة" data-name-en="signature chronograph chronograph watch">
+        <div class="p-vis vis" style="--h:44"><div class="sil sil-c"></div><div class="sil sil-pill" style="width:36%;height:44px;inset-inline-end:10%;bottom:12%"></div><div class="horizon" style="top:76%"></div><div class="vign"></div></div>
+        <div class="p-info"><span class="p-cat" data-ar="ساعات" data-en="Watches">ساعات</span><h4 data-ar="كرونوغراف التوقيع" data-en="Signature Chronograph">كرونوغراف التوقيع</h4>
+          <div class="p-meta"><b data-ar="Placeholder — سعر غير مُعلن" data-en="Placeholder — price TBC">Placeholder — سعر غير مُعلن</b><span class="p-cta" data-ar="عرض الحكاية ↗" data-en="View story ↗">عرض الحكاية ↗</span></div></div>
+      </article>
+      <article class="p-card rv" data-cat="leather" data-name-ar="ويكندر التراث حقيبة جلد" data-name-en="heritage weekender leather bag">
+        <div class="p-vis vis" style="--h:28"><div class="sil sil-r" style="width:58%;height:54%;left:21%;top:23%"></div><div class="sil sil-c" style="width:24%;inset-inline-end:11%;top:12%;opacity:.7"></div><div class="horizon"></div><div class="vign"></div></div>
+        <div class="p-info"><span class="p-cat" data-ar="جلود" data-en="Leather">جلود</span><h4 data-ar="ويكندر التراث" data-en="Heritage Weekender">ويكندر التراث</h4>
+          <div class="p-meta"><b data-ar="Placeholder — سعر غير مُعلن" data-en="Placeholder — price TBC">Placeholder — سعر غير مُعلن</b><span class="p-cta" data-ar="عرض الحكاية ↗" data-en="View story ↗">عرض الحكاية ↗</span></div></div>
+      </article>
+      <article class="p-card rv" data-cat="object" data-name-ar="أوبجيكت الأتيليه قطعة المكان" data-name-en="atelier object centerpiece">
+        <div class="p-vis vis" style="--h:190"><div class="sil sil-r" style="width:44%;height:56%;left:28%;top:22%;border-radius:8px"></div><div class="sil sil-pill" style="width:30%;height:50px;inset-inline-start:12%;bottom:12%;opacity:.7"></div><div class="horizon"></div><div class="vign"></div></div>
+        <div class="p-info"><span class="p-cat" data-ar="أوبجيكتس" data-en="Objects">أوبجيكتس</span><h4 data-ar="أوبجيكت الأتيليه" data-en="Atelier Object">أوبجيكت الأتيليه</h4>
+          <div class="p-meta"><b data-ar="Placeholder — سعر غير مُعلن" data-en="Placeholder — price TBC">Placeholder — سعر غير مُعلن</b><span class="p-cta" data-ar="عرض الحكاية ↗" data-en="View story ↗">عرض الحكاية ↗</span></div></div>
+      </article>
+      <article class="p-card rv" data-cat="watch" data-name-ar="ساعة الميدان فايس دايل ساعة" data-name-en="plaza dial watch face">
+        <div class="p-vis vis" style="--h:70"><div class="sil sil-c" style="width:56%;left:22%;top:22%"></div><div class="sil sil-pill" style="width:30%;height:44px;inset-inline-start:12%;bottom:14%;opacity:.7"></div><div class="horizon" style="top:72%"></div><div class="vign"></div></div>
+        <div class="p-info"><span class="p-cat" data-ar="ساعات" data-en="Watches">ساعات</span><h4 data-ar="ساعة الميدان" data-en="Plaza Dial">ساعة الميدان</h4>
+          <div class="p-meta"><b data-ar="Placeholder — سعر غير مُعلن" data-en="Placeholder — price TBC">Placeholder — سعر غير مُعلن</b><span class="p-cta" data-ar="عرض الحكاية ↗" data-en="View story ↗">عرض الحكاية ↗</span></div></div>
+      </article>
+      <article class="p-card rv" data-cat="leather" data-name-ar="حافظة النهار محفظة جلد" data-name-en="day folio wallet leather">
+        <div class="p-vis vis" style="--h:12"><div class="sil sil-r" style="width:52%;height:40%;left:24%;top:30%"></div><div class="sil sil-c" style="width:20%;inset-inline-end:13%;bottom:16%;opacity:.7"></div><div class="horizon"></div><div class="vign"></div></div>
+        <div class="p-info"><span class="p-cat" data-ar="جلود" data-en="Leather">جلود</span><h4 data-ar="حافظة النهار" data-en="Day Folio">حافظة النهار</h4>
+          <div class="p-meta"><b data-ar="Placeholder — سعر غير مُعلن" data-en="Placeholder — price TBC">Placeholder — سعر غير مُعلن</b><span class="p-cta" data-ar="عرض الحكاية ↗" data-en="View story ↗">عرض الحكاية ↗</span></div></div>
+      </article>
+      <article class="p-card rv" data-cat="object" data-name-ar="مبخرة الأتيليه انسانسينس اوبجيكت" data-name-en="atelier incense object">
+        <div class="p-vis vis" style="--h:320"><div class="sil sil-pill" style="width:40%;height:96px;left:30%;top:34%"></div><div class="sil sil-c" style="width:18%;inset-inline-start:14%;top:14%;opacity:.7"></div><div class="horizon" style="top:78%"></div><div class="vign"></div></div>
+        <div class="p-info"><span class="p-cat" data-ar="أوبجيكتس" data-en="Objects">أوبجيكتس</span><h4 data-ar="مبخرة الأتيليه" data-en="Atelier Incense">مبخرة الأتيليه</h4>
+          <div class="p-meta"><b data-ar="Placeholder — سعر غير مُعلن" data-en="Placeholder — price TBC">Placeholder — سعر غير مُعلن</b><span class="p-cta" data-ar="عرض الحكاية ↗" data-en="View story ↗">عرض الحكاية ↗</span></div></div>
+      </article>
+      <div class="coll-empty" id="collEmpty"><p data-ar="لا توجد نتائج. جرّب كلمة أخرى." data-en="No results. Try another word.">لا توجد نتائج. جرّب كلمة أخرى.</p></div>
+    </div>
+    <p class="coll-note" data-ar="كل الأسماء والأسعار هنا Placeholder — لا ندّعى أي منتج حقيقي." data-en="All names and prices here are placeholders — no real product is claimed.">كل الأسماء والأسعار هنا Placeholder.</p>
+  </div>
+</section>
+
+<!-- ============ 06 TRUST ARCHITECTURE ============ -->
+<section id="trust">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا ثقة بدون شهادات مخترعة؟" data-en="Why trust without fake testimonials?">لماذا ثقة بدون شهادات مخترعة؟</span></div>
+      <p data-ar="لأن الشهادات والأرقام المخترعة هي أول حاجة بتوقّع الثقة لما الزائر يكتشفها. بناء الثقة الصح يبدأ من الوضوح: نقول إيه عندنا، وإيه لسه Placeholder — ونركّب أماكن الشهادات الحقيقية جاهزة." data-en="Because invented testimonials and numbers are the first thing to break trust when discovered. Real trust starts with clarity: say what exists, mark what is a placeholder, and leave ready slots for real testimonials.">لأن الشهادات المخترعة هي أول حاجة بتوقّع الثقة.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">06</span>
+      <span class="kicker" data-ar="هندسة الثقة" data-en="Trust Architecture">هندسة الثقة</span>
+      <h2 data-ar="الثقة… تُبنى، لا تُكتب." data-en="Trust is built, not written.">الثقة… تُبنى، لا تُكتب.</h2>
+      <p data-ar="أربعة أعمدة — بأماكن جاهزة للمحتوى الحقيقي." data-en="Four pillars — with ready slots for real content.">أربعة أعمدة — بأماكن جاهزة للمحتوى الحقيقي.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="t-card rv"><div class="t-ico">◆</div><h4 data-ar="الجودة" data-en="Quality">الجودة</h4><p data-ar="معايير مكتوبة بوضوح: إيه اللي بيتحلّ وإيه اللي متقبلش." data-en="Written standards: what gets accepted and what never does.">معايير مكتوبة بوضوح.</p><span class="t-ph" data-ar="Placeholder — سياسة الجودة" data-en="Placeholder — quality policy">Placeholder — سياسة الجودة</span></div>
+      <div class="t-card rv" style="--d:.08s"><div class="t-ico">✦</div><h4 data-ar="التفاصيل" data-en="Details">التفاصيل</h4><p data-ar="شفافية في التفاصيل: خامات، مقاسات، وحدود — قبل الطلب." data-en="Transparency in details: materials, measures and limits — before ordering.">شفافية في التفاصيل.</p><span class="t-ph" data-ar="Placeholder — دليل المقاسات" data-en="Placeholder — sizing guide">Placeholder — دليل المقاسات</span></div>
+      <div class="t-card rv" style="--d:.16s"><div class="t-ico">◑</div><h4 data-ar="الدعم" data-en="Support">الدعم</h4><p data-ar="قنوات واضحة وساعات ردّ مكتوبة — من غير قوائم مخفية." data-en="Clear channels and written response hours — no hidden menus.">قنوات واضحة وساعات ردّ مكتوبة.</p><span class="t-ph" data-ar="Placeholder — سياسة الدعم" data-en="Placeholder — support policy">Placeholder — سياسة الدعم</span></div>
+      <div class="t-card rv" style="--d:.24s"><div class="t-ico">◈</div><h4 data-ar="الخدمة" data-en="Service">الخدمة</h4><p data-ar="وعد واحد بسيط وواضح يتكرر في كل صفحة — ونفيه اللي مش هنوفّيه." data-en="One simple promise repeated on every page — and we deny what we cannot deliver.">وعد واحد بسيط يتكرر في كل صفحة.</p><span class="t-ph" data-ar="Placeholder — وعد الخدمة" data-en="Placeholder — service promise">Placeholder — وعد الخدمة</span></div>
+    </div>
+    <div class="trust-note rv" data-ar="ملاحظة صدق: هذا ديمو. لا توجد شهادات عملاء ولا أرقام ولا تقييمات — عمداً. أماكنها جاهزة بمجرد توفر محتوى موثّق." data-en="Honesty note: this is a demo. No testimonials, numbers or ratings — deliberately. The slots are ready once verified content exists.">ملاحظة صدق: هذا ديمو. لا توجد شهادات ولا أرقام — عمداً.</div>
+  </div>
+</section>
+<!-- ============ 07 WHY THIS DESIGN ============ -->
+<section id="why-design">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا نشرح التصميم للعميل؟" data-en="Why explain design to the client?">لماذا نشرح التصميم للعميل؟</span></div>
+      <p data-ar="لأن القرار لما يبقى مفهوم ما بيتنساش. القسم ده بيحوّل «عجبني / مش عجبني» لـ«فاهمني — خليها كده». وده بيقلّل التعديلات وبيسرّع الموافقة." data-en="Because a decision that is understood is not forgotten. This section turns 'I like / I don't like' into 'understood — keep it', which reduces revisions and speeds approval.">لأن القرار لما يبقى مفهوم ما بيتنساش.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">07</span>
+      <span class="kicker" data-ar="لماذا هذا التصميم؟" data-en="Why this design?">لماذا هذا التصميم؟</span>
+      <h2 data-ar="كل قرار تصميم… له سبب تجاري." data-en="Every design decision has a business reason.">كل قرار تصميم… له سبب تجاري.</h2>
+      <p data-ar="افتح أي بند — اليمين «ليه»، واليسار «إزاي اتنفّذ»." data-en="Open any item — the first panel is WHY, the second is HOW.">افتح أي بند — «ليه» و«إزاي».</p>
+    </div>
+    <div class="why-list" id="whyList">
+      <div class="why-item open">
+        <div class="why-head"><span class="w-no">01</span><h4 data-ar="تموضع البراند" data-en="Brand Positioning">تموضع البراند</h4><span class="w-plus">+</span></div>
+        <div class="why-body"><div class="wb-in">
+          <div><div class="wb-k" data-ar="ليه؟" data-en="WHY?">ليه؟</div><p data-ar="الهيرو بيبلّغ مكانة البراند قبل أي منتج أو سعر — عشان الزائر يقارن بالمشاعر الأول، وبالخصائص بعدين." data-en="The hero delivers brand position before any product or price — visitors compare feelings first, features later.">الهيرو بيبلّغ مكانة البراند قبل أي منتج.</p></div>
+          <div><div class="wb-k" data-ar="إزاي؟" data-en="HOW?">إزاي؟</div><p data-ar="شاشة فاضية تقريبًا → الشعار → الحركة → الصورة → الصفحة. قصيرة، وبتبني ترقّب من غير ما تُتعب." data-en="A near-empty screen → logo → motion → image → page. Short: it builds anticipation without exhausting.">شاشة فاضية → شعار → حركة → صورة → صفحة.</p></div>
+        </div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-head"><span class="w-no">02</span><h4 data-ar="التسلسل البصري" data-en="Visual Hierarchy">التسلسل البصري</h4><span class="w-plus">+</span></div>
+        <div class="why-body"><div class="wb-in">
+          <div><div class="wb-k" data-ar="ليه؟" data-en="WHY?">ليه؟</div><p data-ar="لو كل حاجة مهمة — ولا حاجة مهمة. التسلسل بيوجّه العين لرتبة واحدة: خط واحد تفتكره." data-en="If everything is important, nothing is. Hierarchy points the eye at one order: one line you remember.">لو كل حاجة مهمة — ولا حاجة مهمة.</p></div>
+          <div><div class="wb-k" data-ar="إزاي؟" data-en="HOW?">إزاي؟</div><p data-ar="فروقات حجم واضحة (عنوان 56px مقابل نص 16px)، لون واحد قوي للدعوة، وأرقام أقسام ضخمة شفّافة كعلامات مسار." data-en="Clear size jumps (56px heads vs 16px body), one strong CTA color, and huge translucent section numbers as waymarks.">فروقات حجم واضحة + لون واحد للدعوة.</p></div>
+        </div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-head"><span class="w-no">03</span><h4 data-ar="الطباعة" data-en="Typography">الطباعة</h4><span class="w-plus">+</span></div>
+        <div class="why-body"><div class="wb-in">
+          <div><div class="wb-k" data-ar="ليه؟" data-en="WHY?">ليه؟</div><p data-ar="الخط العربي هو أول انطباع عن «ذوق» البراند. عايز فخامة بلا زخرفة زيادة، ووضوح بلا برود." data-en="The Arabic typeface is the first impression of taste: luxury without ornament, clarity without coldness.">الخط العربي هو أول انطباع عن ذوق البراند.</p></div>
+          <div><div class="wb-k" data-ar="إزاي؟" data-en="HOW?">إزاي؟</div><p data-ar="Vazirmatn الفارسي للنصوص — نظيف وحديث وبيقرا ممتاز على الشاشة. Amiri للجمل العاطفية — بيدّي طابع تراثي فاخر. اتنين بس، ما تلاتة." data-en="Persian Vazirmatn for body — clean, modern, screen-readable. Amiri for emotional lines — heritage luxury. Two families, not three.">Vazirmatn للنصوص + Amiri للجمل العاطفية.</p></div>
+        </div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-head"><span class="w-no">04</span><h4 data-ar="التصوير" data-en="Photography">التصوير</h4><span class="w-plus">+</span></div>
+        <div class="why-body"><div class="wb-in">
+          <div><div class="wb-k" data-ar="ليه؟" data-en="WHY?">ليه؟</div><p data-ar="الصور بتبيع الحجم والإحساس — كلمات ما تقدرش توصفها. وبدون صور أصلية كويسة، الأفضل نتوضّح بدل ما نزوّق." data-en="Images sell weight and feel — words cannot. And without good original photography, honesty beats fake stock.">الصور بتبيع الحجم والإحساس.</p></div>
+          <div><div class="wb-k" data-ar="إزاي؟" data-en="HOW?">إزاي؟</div><p data-ar="هنا: كتل بصرية Placeholder (ضوء + زجاجية) بدل صور مسروقة — عشان الديمو صادق. في نسختك: جلسة تصوير واحدة، إضاءة واحدة، خلفية واحدة." data-en="Here: placeholder visual blocks (light + glass) instead of stolen stock — the demo stays honest. In yours: one shoot, one light, one backdrop.">هنا Placeholder بدل stock مسروق — وفي نسختك جلسة تصوير واحدة.</p></div>
+        </div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-head"><span class="w-no">05</span><h4 data-ar="الحركة" data-en="Motion">الحركة</h4><span class="w-plus">+</span></div>
+        <div class="why-body"><div class="wb-in">
+          <div><div class="wb-k" data-ar="ليه؟" data-en="WHY?">ليه؟</div><p data-ar="الحركة بتوضّح العلاقات: إيه اللي جاي، وإيه اللي أهم دلوقتي. من غير كده، الحركة مجرد زلزال بصري." data-en="Motion explains relationships: what comes next, what matters now. Without that, it is just visual shaking.">الحركة بتوضّح العلاقات: إيه اللي جاي وإيه الأهم.</p></div>
+          <div><div class="wb-k" data-ar="إزاي؟" data-en="HOW?">إزاي؟</div><p data-ar="GSAP + ScrollTrigger + Lenis: كشف تدريجي للأقسام، تثبيت الفصول، تحجيم الهيرو مع السكرول. كل حركة ليها سبب — واللي ما ليهوش سبب اتشال." data-en="GSAP + ScrollTrigger + Lenis: section reveals, chapter pinning, hero scale on scroll. Every move has a reason; reasonless moves were cut.">GSAP + ScrollTrigger + Lenis — كل حركة ليها سبب.</p></div>
+        </div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-head"><span class="w-no">06</span><h4 data-ar="التحويل" data-en="Conversion">التحويل</h4><span class="w-plus">+</span></div>
+        <div class="why-body"><div class="wb-in">
+          <div><div class="wb-k" data-ar="ليه؟" data-en="WHY?">ليه؟</div><p data-ar="التجربة الجميلة بلا مسار = متحف. لازم كل فصل يعرفه الزائر يعرفله خطوة تالية واضحة." data-en="A beautiful experience without a path is a museum. Every chapter must give the visitor a clear next step.">التجربة الجميلة بلا مسار = متحف.</p></div>
+          <div><div class="wb-k" data-ar="إزاي؟" data-en="HOW?">إزاي؟</div><p data-ar="دعوة واحدة مكرّرة (ابني تجربتي / تواصل معنا)، وزرار واتساب ثابت، ورابط دائم للتواصل في آخر كل فصل — من غير نوافذ منبثقة." data-en="One repeated CTA, a fixed WhatsApp button, and a contact link at the end of every chapter — no popups.">دعوة واحدة مكرّرة + واتساب ثابت + رابط تواصل دائم.</p></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 BEFORE / AFTER ============ -->
+<section id="before">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا المقارنة؟" data-en="Why the comparison?">لماذا المقارنة؟</span></div>
+      <p data-ar="لأن العميل لازم يشوف الفرق بعينه مش يسمعه. لما يشوف الصفحة العادية جنب التجربة في نفس الشاشة — القرار بيبقى واضح من غير شرح طويل." data-en="Because the client must see the difference, not hear it. Side by side in one screen, the decision becomes obvious without a long explanation.">لأن العميل لازم يشوف الفرق بعينه مش يسمعه.</p>
+    </aside>
+    <div class="sec-head">
+      <span class="sec-idx">08</span>
+      <span class="kicker" data-ar="قبل / بعد" data-en="Before / After">قبل / بعد</span>
+      <h2 data-ar="من موقع أعمال… إلى تجربة براند." data-en="From a business website to a brand experience.">من موقع أعمال… إلى تجربة براند.</h2>
+    </div>
+    <div class="ba-wrap rv">
+      <div class="ba-cols">
+        <div class="ba-col before">
+          <span class="ba-k" data-ar="قبل" data-en="BEFORE">قبل</span>
+          <h3 data-ar="موقع تعريفي" data-en="Business Website">موقع تعريفي</h3>
+          <ul class="ba-list">
+            <li><span class="m x">✕</span><span data-ar="الصفحة الأولى = قائمة خدمات أو منتجات." data-en="First page = a list of services or products.">الصفحة الأولى = قائمة خدمات.</span></li>
+            <li><span class="m x">✕</span><span data-ar="نصوص عامة تصلح لأي منافس." data-en="Generic copy that fits any competitor.">نصوص عامة تصلح لأي منافس.</span></li>
+            <li><span class="m x">✕</span><span data-ar="هوية موزّعة على الشعار فقط." data-en="Identity living only in the logo.">هوية موزّعة على الشعار فقط.</span></li>
+            <li><span class="m x">✕</span><span data-ar="حركة = انترو أو سلايدر، بلا سبب." data-en="Motion = intro or slider, with no reason.">حركة بلا سبب.</span></li>
+            <li><span class="m x">✕</span><span data-ar="الزائر يخرج وهو: «شوفت حاجة… مش فاكر إيه»." data-en="Visitor leaves: 'I saw something… I forget what.'">الزائر يخرج: «مش فاكر إيه».</span></li>
+          </ul>
+        </div>
+        <div class="ba-col after">
+          <span class="ba-k" data-ar="بعد" data-en="AFTER">بعد</span>
+          <h3 data-ar="تجربة براند رقمية" data-en="Digital Brand Experience">تجربة براند رقمية</h3>
+          <ul class="ba-list">
+            <li><span class="m v">✓</span><span data-ar="الصفحة الأولى = بيان وهوية وشعور." data-en="First page = statement, identity and feeling.">الصفحة الأولى = بيان وهوية وشعور.</span></li>
+            <li><span class="m v">✓</span><span data-ar="نص مكتوب للبراند ده وحده." data-en="Copy written for this brand alone.">نص مكتوب للبراند ده وحده.</span></li>
+            <li><span class="m v">✓</span><span data-ar="نظام كامل: لون، خط، إيقاع، وصوت." data-en="A full system: color, type, rhythm and voice.">نظام كامل: لون، خط، إيقاع.</span></li>
+            <li><span class="m v">✓</span><span data-ar="حركة تشرح — تكشف، تثبّت، تحوّل." data-en="Motion that explains — reveals, pins, transforms.">حركة تشرح — تكشف، تثبّت، تحوّل.</span></li>
+            <li><span class="m v">✓</span><span data-ar="الزائر يخرج وهو: «فاهم مين دول وإيه بيديوني»." data-en="Visitor leaves knowing who they are and what they give.">الزائر يخرج فاهم البراند وشعوره.</span></li>
+          </ul>
+        </div>
+        <div class="ba-mid"></div>
+        <div class="ba-arrow">→</div>
+      </div>
+    </div>
+    <div class="ba-verdict rv">
+      <p><span data-ar="نفس المحتوى تقريبًا —" data-en="Almost the same content —">نفس المحتوى تقريبًا —</span> <b data-ar="لكن تجربة مختلفة تمامًا." data-en="an entirely different experience.">لكن تجربة مختلفة تمامًا.</b></p>
+      <a href="#final" class="btn-gold"><span data-ar="ابدأ التغيير" data-en="Start the change">ابدأ التغيير</span> →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 FROM IDENTITY TO WEBSITE ============ -->
+<section id="identity">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا تبدأ من الهوية مش من الكود؟" data-en="Why start from identity, not code?">لماذا تبدأ من الهوية مش من الكود؟</span></div>
+      <p data-ar="لأن الكود بيترجم قرار — ما بيعملوش. لو الهوية مش واضحة، أي مطوّر هيبني «موقعًا محترمًا»، وهيفضل ناقص حاجة محدش يعرف يسمّيها." data-en="Because code translates decisions — it does not make them. Without a clear identity you get a 'decent site' that is missing something no one can name.">لأن الكود بيترجم قرار — ما بيعملوش.</p>
+    </aside>
+    <div class="sec-head center">
+      <span class="sec-idx" style="inset-inline-start:50%;transform:translateX(-50%)">09</span>
+      <span class="kicker" data-ar="من الهوية إلى الموقع" data-en="From identity to website">من الهوية إلى الموقع</span>
+      <h2><span data-ar="الموقع الحقيقي لا يبدأ من" data-en="The real website does not start with">الموقع الحقيقي لا يبدأ من</span> <b style="font-weight:inherit;color:var(--champ)" data-ar="Code." data-en="code.">Code.</b></h2>
+      <p><span data-ar="يبدأ من" data-en="It starts with">يبدأ من</span> <b style="color:var(--champ)">Identity + Strategy.</b></p>
+    </div>
+    <div class="flow" id="flow">
+      <div class="flow-line" id="flowLine"></div>
+      <div class="flow-step"><span class="f-node">01</span><span class="f-en">LOGO</span><h4 data-ar="الشعار" data-en="Logo">الشعار</h4><p data-ar="الشكل اللي بيتحط في كل مكان — لازم يشتغل بحجم صغير وكبير." data-en="The mark that goes everywhere — must work small and large.">الشكل اللي بيتحط في كل مكان.</p></div>
+      <div class="flow-step"><span class="f-node">02</span><span class="f-en">COLORS</span><h4 data-ar="الألوان" data-en="Colors">الألوان</h4><p data-ar="نظام لونين كحد أقصى: أساس + تمييز. لو أكتر من كده، الرسالة بتتلوّن زيادة." data-en="A two-color system at most: base + accent. More colors, more noise.">نظام لونين كحد أقصى.</p></div>
+      <div class="flow-step"><span class="f-node">03</span><span class="f-en">TYPE</span><h4 data-ar="الخطوط" data-en="Type">الخطوط</h4><p data-ar="خط عرض + خط نص، بحدّ نصاب للحجمات — عشان الإيقاع يفضل متسق." data-en="Display + text face, with capped sizes — so rhythm stays consistent.">خط عرض + خط نص بحدّ نصاب.</p></div>
+      <div class="flow-step"><span class="f-node">04</span><span class="f-en">PHOTOGRAPHY</span><h4 data-ar="التصوير" data-en="Photography">التصوير</h4><p data-ar="جلسة واحدة بعيّن جودة كل صورة بعدها — الضوء والخلفية والمعالجة." data-en="One shoot defines the quality of every image after — light, backdrop, grade.">جلسة واحدة بعيّن جودة كل صورة بعدها.</p></div>
+      <div class="flow-step"><span class="f-node">05</span><span class="f-en">UX</span><h4 data-ar="رحلة المستخدم" data-en="UX">رحلة المستخدم</h4><p data-ar="ترتيب الأقسام يبنى رحلة: إيه أول ما يشوف، وإيه آخر حاجة عايز يعملها." data-en="Section order builds a journey: what they see first, what they should do last.">ترتيب الأقسام يبنى رحلة.</p></div>
+      <div class="flow-step"><span class="f-node">06</span><span class="f-en">MOTION</span><h4 data-ar="الحركة" data-en="Motion">الحركة</h4><p data-ar="قواعدها بتتكتب هنا مش في الآخر: تكشف، تربط، تحوّل — لا تشوّت." data-en="Rules written here, not at the end: reveal, connect, transform — never shake.">قواعدها بتتكتب هنا مش في الآخر.</p></div>
+      <div class="flow-step"><span class="f-node">07</span><span class="f-en">WEBSITE</span><h4 data-ar="الموقع" data-en="Website">الموقع</h4><p data-ar="دلوقتي الكود بقى ترجمة — وطبيعي يطلع صح من أول مرة." data-en="Now code is translation — and it comes out right the first time.">دلوقتي الكود بقى ترجمة.</p></div>
+      <p class="flow-quote rv"><span data-ar="الفكرة واحدة:" data-en="One idea:">الفكرة واحدة:</span> <b data-ar="الموقع هو آخر خطوة، مش أولها." data-en="the website is the last step, not the first.">الموقع هو آخر خطوة، مش أولها.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 YOUR VERSION ============ -->
+<section id="yours">
+  <div class="wrap">
+    <aside class="why">
+      <div class="why-k"><span data-ar="لماذا تقول بصراحة «هذا ديمو»؟" data-en="Why say honestly 'this is a demo'?">لماذا تقول بصراحة «هذا ديمو»؟</span></div>
+      <p data-ar="لأن الشفافية نفسها = ثقة. لما نقول «كل ده Placeholder»، الزائر بيفهم إنك مش بتضخّم — وإن النسخة الحقيقية هتبقى مبنية عليه هو، مش عليه." data-en="Because transparency is trust. Saying 'this is all placeholder' shows you do not inflate — and the real version will be built on the client, not on this.">لأن الشفافية نفسها = ثقة.</p>
+    </aside>
+    <div class="yours-grid">
+      <div class="yours-main rv">
+        <span class="kicker" data-ar="النسخة الحقيقية" data-en="The Real Version">النسخة الحقيقية</span>
+        <h2><span data-ar="اللي شايفه دلوقتي" data-en="What you see now is a">اللي شايفه دلوقتي</span> <b data-ar="Demo." data-en="demo.">Demo.</b></h2>
+        <p class="y-lead" data-ar="النسخة الحقيقية لن تكون نسخة من هذا الموقع. هتبدأ من الحاجات دي — بتاعتك أنت:" data-en="The real version will not be a copy of this site. It starts from yours:">النسخة الحقيقية لن تكون نسخة من هذا الموقع.</p>
+        <div class="y-cta">
+          <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-gold"><span data-ar="ابني تجربتي" data-en="Build my experience">ابني تجربتي</span> →</a>
+          <a href="#final" class="btn-line"><span data-ar="شوف الخاتمة" data-en="See the ending">شوف الخاتمة</span></a>
+        </div>
+      </div>
+      <div class="yours-card rv" style="--d:.12s">
+        <span class="y-tag" data-ar="بتبدأ من عندك" data-en="IT STARTS WITH YOU">بتبدأ من عندك</span>
+        <div class="yours-chips">
+          <div class="yc"><b>01</b><span data-ar="براندك — اسمه وصوته وشخصيته." data-en="Your brand — its name, voice and character.">براندك — اسمه وصوته وشخصيته.</span></div>
+          <div class="yc"><b>02</b><span data-ar="جمهورك — مين بالضبط بيشتري ولماذا." data-en="Your audience — who exactly buys, and why.">جمهورك — مين بالضبط بيشتري.</span></div>
+          <div class="yc"><b>03</b><span data-ar="منتجاتك — الخامة والسعر والقصة." data-en="Your products — material, price and story.">منتجاتك — الخامة والسعر والقصة.</span></div>
+          <div class="yc"><b>04</b><span data-ar="هويتك — الألوان والخطوط والصورة." data-en="Your identity — colors, type and image.">هويتك — الألوان والخطوط.</span></div>
+          <div class="yc"><b>05</b><span data-ar="قصتك — من أين بدأت ولماذا تستمر." data-en="Your story — where you began and why you continue.">قصتك — من أين بدأت.</span></div>
+          <div class="yc"><b>06</b><span data-ar="نموذج عملك — الطلب والخدمة والوعد." data-en="Your model — the order, the service, the promise.">نموذج عملك — الطلب والخدمة.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="final">
+  <div class="f-lines"></div>
+  <div class="wrap">
+    <span class="chip f-eye"><i></i><span data-ar="نهاية التجربة — بداية الشغل" data-en="END OF EXPERIENCE — START OF WORK">نهاية التجربة — بداية الشغل</span></span>
+    <h2><span data-ar="براندك يستحق أكثر من صفحة على الإنترنت." data-en="Your brand deserves more than a page on the internet.">براندك يستحق أكثر من صفحة على الإنترنت.</span><span data-ar="يستحق تجربة." data-en="It deserves an experience.">يستحق تجربة.</span></h2>
+    <p class="f-sub" data-ar="احكِلنا فكرتك — هنرجع لك خطة: الهوية، المحتوى، والتجربة. بدون التزام من الديمو اللي شوفته ده." data-en="Tell us the idea — you get back a plan: identity, content and experience. No commitment from this demo.">احكِلنا فكرتك — هنرجع لك خطة.</p>
+    <div class="f-cta">
+      <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-gold"><span data-ar="ابني تجربتي" data-en="Build my experience">ابني تجربتي</span> →</a>
+      <a href="https://wa.me/201000000000" target="_blank" rel="noopener" class="btn-line"><span data-ar="تواصل معنا" data-en="Talk to us">تواصل معنا</span></a>
+    </div>
+    <div class="f-brand">HIGH LIFE — CONCEPT DEMO</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="brand">HIGH <b>LIFE</b></div>
+        <p style="margin-top:10px;max-width:340px" data-ar="ديمو كونسبت — يوضّح الفرق بين موقع تعريفي وتجربة براند رقمية." data-en="A concept demo — showing the difference between a business website and a digital brand experience.">ديمو كونسبت.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#statement" data-ar="البيان" data-en="Statement">البيان</a>
+        <a href="#world" data-ar="عالم البراند" data-en="Brand World">عالم البراند</a>
+        <a href="#collection" data-ar="المجموعة" data-en="Collection">المجموعة</a>
+        <a href="#why-design" data-ar="لماذا هذا التصميم" data-en="Why this design">لماذا هذا التصميم</a>
+        <a href="https://wa.me/201000000000" target="_blank" rel="noopener" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span data-ar="© 2026 HIGH LIFE — كل المحتوى هنا كونسبت، بدون ادّعاءات أو أرقام أو شهادات." data-en="© 2026 HIGH LIFE — all content here is concept: no claims, numbers or testimonials.">© 2026 HIGH LIFE — كل المحتوى كونسبت.</span>
+      <span style="direction:ltr">Built with HTML · CSS · JS · GSAP · Lenis</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WIDGETS ============ -->
+<a id="wa" href="https://wa.me/201000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.56 4.18 1.62 6L4 29l8.1-1.58a12 12 0 0 0 3.94.66h.01C22.69 28.08 28 22.68 28 16.04 28 8.4 22.68 3 16.04 3Zm0 21.86h-.01a10 10 0 0 1-3.55-.67l-.26-.1-4.8.94.96-4.67-.17-.27a9.86 9.86 0 0 1-1.51-5.25c0-5.47 4.46-9.92 9.94-9.92 5.48 0 9.94 4.45 9.94 9.92 0 5.48-4.46 9.93-9.94 9.93Zm5.45-7.43c-.3-.15-1.76-.87-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+</a>
+
+<div id="demoBar"><span data-ar="وضع الشرح مفعّل — كل قسم دلوقتي بيشرح نفسه." data-en="Demo mode on — every section now explains itself.">وضع الشرح مفعّل.</span><span class="x" id="demoOff">✕</span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+/* ================= LANGUAGE ================= */
+var lang=document.documentElement.lang==='en'?'en':'ar';
+var $split=$('[data-split]');
+
+function splitStatement(){
+  if(!$split)return;
+  var text=(lang==='ar')?$split.dataset.ar:$split.dataset.en;
+  $split.innerHTML=text.split(' ').map(function(w,i){return '<span class="w" style="--i:'+i+'"><i>'+w+'</i></span>'}).join(' ');
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
+  document.title=(lang==='ar')?'HIGH LIFE — تجربة براند فاخرة | ديمو كونسبت':'HIGH LIFE — Premium Brand Experience | Concept Demo';
+  $$('[data-ar]').forEach(function(el){el.textContent=(lang==='ar')?el.dataset.ar:el.dataset.en});
+  $$('[data-ar-ph]').forEach(function(el){el.placeholder=(lang==='ar')?el.dataset.arPh:el.dataset.enPh});
+  $('#langBtn').textContent=(lang==='ar')?'EN':'عربي';
+  store.set('hl-lang',lang);
+  splitStatement();
+  if($split&&$split.classList.contains('in')){$split.classList.add('in')}
+  applyFilters();
+  syncWhy();
+  if(window.ScrollTrigger){setTimeout(function(){ScrollTrigger.refresh()},60)}
+}
+$('#langBtn').addEventListener('click',function(){lang=(lang==='ar')?'en':'ar';applyLang()});
+
+/* ================= THEME ================= */
+var theme=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme',theme);
+  $('#themeIco').textContent=(theme==='dark')?'☀':'☾';
+  store.set('hl-theme',theme);
+}
+$('#themeBtn').addEventListener('click',function(){theme=(theme==='dark')?'light':'dark';applyTheme()});
+applyTheme();
+
+/* ================= INTRO ================= */
+var intro=$('#intro');
+if(intro){intro.addEventListener('click',function(){intro.style.opacity='0';intro.style.visibility='hidden';intro.style.pointerEvents='none'})}
+
+/* ================= NAV ================= */
+var nav=$('#nav'),progress=$('#progress'),mMenu=$('#mMenu'),burger=$('#burger');
+function onScroll(){
+  var y=window.scrollY||document.documentElement.scrollTop;
+  nav.classList.toggle('scrolled',y>30);
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';
+  flowUpdate();
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+burger.addEventListener('click',function(){mMenu.classList.toggle('open');document.documentElement.style.overflow=mMenu.classList.contains('open')?'hidden':''});
+$$('#mMenu a').forEach(function(a){a.addEventListener('click',function(){mMenu.classList.remove('open');document.documentElement.style.overflow=''})});
+
+/* ================= DEMO MODE ================= */
+function setDemo(on){
+  document.body.classList.toggle('demo',on);
+  store.set('hl-demo',on?'1':'0');
+}
+$('#demoBtn').addEventListener('click',function(){setDemo(!document.body.classList.contains('demo'))});
+var demoOff=$('#demoOff'); if(demoOff){demoOff.addEventListener('click',function(){setDemo(false)})}
+if(store.get('hl-demo')==='1'){document.documentElement.classList.add('lock');setDemo(true);setTimeout(function(){document.documentElement.classList.remove('lock')},1400)}
+
+/* ================= REVEAL ================= */
+var revealSel='.rv,[data-split],.ba-wrap';
+function sweepReveal(){
+  $$(revealSel).forEach(function(el){
+    if(el.classList.contains('in'))return;
+    var r=el.getBoundingClientRect();
+    if(r.top<window.innerHeight*0.94){el.classList.add('in')}
+  });
+}
+if('IntersectionObserver' in window && !reduce){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+  $$(revealSel).forEach(function(el){io.observe(el)});
+}else{$$(revealSel).forEach(function(el){el.classList.add('in')})}
+window.addEventListener('scroll',sweepReveal,{passive:true});
+
+/* ================= CHAPTERS IN ================= */
+$$('[data-ch]').forEach(function(ch){
+  if('IntersectionObserver' in window&&!reduce){
+    var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ch.classList.add('in');o.unobserve(ch)}})},{threshold:0.3});
+    o.observe(ch);
+  }else{ch.classList.add('in')}
+});
+
+/* ================= FILTERS + SEARCH ================= */
+var activeF='all',query='';
+function applyFilters(){
+  var cards=$$('.p-card'),shown=0;
+  cards.forEach(function(c){
+    var names=((lang==='ar'?c.dataset.nameAr:c.dataset.nameEn)||'')+' '+((lang==='en'?c.dataset.nameAr:c.dataset.nameEn)||'');
+    var okCat=(activeF==='all'||c.dataset.cat===activeF);
+    var okQ=!query||names.toLowerCase().indexOf(query)>-1;
+    var show=okCat&&okQ;
+    c.style.display=show?'':'none';
+    if(show)shown++;
+  });
+  var empty=$('#collEmpty'); if(empty){empty.classList.toggle('show',shown===0)}
+}
+$$('#filters .filter').forEach(function(b){
+  b.addEventListener('click',function(){
+    $$('#filters .filter').forEach(function(x){x.classList.remove('active')});
+    b.classList.add('active');activeF=b.dataset.f;applyFilters();
+  });
+});
+var searchEl=$('#search');
+if(searchEl){searchEl.addEventListener('input',function(){query=searchEl.value.trim().toLowerCase();applyFilters()})}
+
+/* ================= STORY STEPS ================= */
+var storySteps=$$('.story-step'),storyImgs=$$('.story-img'),storyDots=$$('.sdot'),storyNo=$('#storyNo'),curStep=-1;
+function setStep(i){
+  if(i===curStep)return;curStep=i;
+  storySteps.forEach(function(s,k){s.classList.toggle('on',k===i)});
+  storyImgs.forEach(function(s,k){s.classList.toggle('active',k===i)});
+  storyDots.forEach(function(s,k){s.classList.toggle('on',k===i)});
+  if(storyNo){storyNo.textContent='0'+(i+1)}
+}
+if(storySteps.length&&'IntersectionObserver' in window){
+  var so=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){setStep(parseInt(e.target.dataset.step,10))}});
+  },{rootMargin:'-42% 0px -42% 0px'});
+  storySteps.forEach(function(s){so.observe(s)});
+}else if(storySteps.length){setStep(0)}
+
+/* ================= ACCORDION (WHY DESIGN) ================= */
+var whyItems=$$('#whyList .why-item');
+function syncWhy(){
+  whyItems.forEach(function(it){
+    var body=$('.why-body',it);
+    if(!body)return;
+    body.style.maxHeight=it.classList.contains('open')?(body.scrollHeight+'px'):'0px';
+  });
+}
+whyItems.forEach(function(it){
+  $('.why-head',it).addEventListener('click',function(){
+    var wasOpen=it.classList.contains('open');
+    whyItems.forEach(function(x){x.classList.remove('open')});
+    if(!wasOpen){it.classList.add('open')}
+    syncWhy();
+  });
+});
+syncWhy();
+window.addEventListener('resize',syncWhy);
+
+/* ================= FLOW ================= */
+var flow=$('#flow'),flowLine=$('#flowLine');
+function flowUpdate(){
+  if(!flow||!flowLine)return;
+  var r=flow.getBoundingClientRect();
+  var p=(window.innerHeight*0.62-r.top)/r.height;
+  p=Math.max(0,Math.min(1,p));
+  flowLine.style.height=(p*100)+'%';
+  $$('.flow-step',flow).forEach(function(st){
+    var sr=st.getBoundingClientRect();
+    st.classList.toggle('on',sr.top<window.innerHeight*0.66);
+  });
+}
+flowUpdate();
+
+/* ================= LENIS ================= */
+var lenis=null;
+if(!reduce&&window.Lenis){
+  try{
+    lenis=new Lenis({duration:1.1,smoothWheel:true});
+    window.__lenis=lenis;
+    if(window.ScrollTrigger){lenis.on('scroll',ScrollTrigger.update)}
+    var lraf=function(t){lenis.raf(t);requestAnimationFrame(lraf)};
+    requestAnimationFrame(lraf);
+  }catch(e){lenis=null}
+}
+
+/* ================= ANCHORS ================= */
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href^="#"]');if(!a)return;
+  var id=a.getAttribute('href');if(id==='#'||id.length<2)return;
+  var el=document.querySelector(id);if(!el)return;
+  e.preventDefault();
+  if(mMenu.classList.contains('open')){mMenu.classList.remove('open');document.documentElement.style.overflow=''}
+  if(lenis){lenis.scrollTo(el,{offset:-66,duration:1.25})}
+  else{window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-66,behavior:reduce?'auto':'smooth'})}
+});
+
+/* ================= GSAP ================= */
+if(window.gsap&&window.ScrollTrigger&&!reduce){
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* hero: text moves up + image scales + fades → becomes chapter */
+  var heroTl=gsap.timeline({scrollTrigger:{trigger:'#hero',start:'top top',end:'+=95%',pin:true,scrub:.7}});
+  heroTl.to('.hero-in',{yPercent:-20,opacity:0,ease:'none'},0)
+        .to('.hero-bg',{scale:1.16,opacity:.35,ease:'none'},0)
+        .to('.scroll-cue',{opacity:0,ease:'none'},0);
+
+  /* section numbers drift (parallax) */
+  gsap.utils.toArray('.sec-idx').forEach(function(el){
+    gsap.fromTo(el,{y:56},{y:-56,ease:'none',scrollTrigger:{trigger:el.closest('section'),start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* glow drift */
+  gsap.utils.toArray('.glow-a').forEach(function(el){
+    gsap.fromTo(el,{y:-70},{y:90,ease:'none',scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* chapter backgrounds: slow scale as they hold */
+  gsap.utils.toArray('.chapter .ch-bg').forEach(function(el){
+    gsap.fromTo(el,{scale:1.1},{scale:1,ease:'none',scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* signature visuals: subtle rise + scale */
+  gsap.utils.toArray('.sig-vis').forEach(function(el){
+    gsap.fromTo(el,{y:44},{y:-44,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* story frame scales gently with steps */
+  gsap.fromTo('.story-frame',{scale:.96},{scale:1,ease:'none',scrollTrigger:{trigger:'.story-wrap',start:'top bottom',end:'center center',scrub:true}});
+
+  /* final CTA glow pulse-in */
+  gsap.fromTo('#final .f-lines',{opacity:0},{opacity:.5,scrollTrigger:{trigger:'#final',start:'top 80%',end:'top 40%',scrub:true}});
+
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+}
+
+/* ================= BOOT ================= */
+document.addEventListener('DOMContentLoaded',function(){document.documentElement.classList.add('ready')});
+if(document.readyState!=='loading'){document.documentElement.classList.add('ready')}
+
+splitStatement();
+applyFilters();
+onScroll();
+sweepReveal();
+if(store.get('hl-lang')==='en'){lang='en';applyLang()}
+window.addEventListener('load',function(){
+  applyFilters();syncWhy();sweepReveal();
+  setTimeout(function(){sweepReveal();syncWhy()},900);
+  if(window.ScrollTrigger){setTimeout(function(){ScrollTrigger.refresh()},300)}
+});
+})();
+</script>
+</body>
+</html>
